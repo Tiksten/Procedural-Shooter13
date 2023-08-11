@@ -7,16 +7,23 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(Tilemap))]
 public class Level : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject roomObject;
+
     private Vector3Int pos = Vector3Int.zero;
 
     [SerializeField]
     private int rooms = 7;
 
-    [SerializeField]
-    private Tile floor;
+    public Tile floor;
 
-    [SerializeField]
-    private Tile wall;
+    public Tile wall;
+
+    public Tile door;
+
+    public GameObject exit;
+
+    public GameObject enemy;
 
     private Tilemap tilemap;
 
@@ -31,11 +38,6 @@ public class Level : MonoBehaviour
     private void Start()
     {
         tilemap = GetComponent<Tilemap>();
-
-        //BuildRoom(Vector3Int.zero, 3, 5);
-
-        //BuildRoad(Vector3Int.zero, Vector2Int.right);
-        //BuildRoad(Vector3Int.zero, Vector2Int.down);
 
         RoadCycle();
     }
@@ -62,22 +64,24 @@ public class Level : MonoBehaviour
         pos = pos + (Vector3Int)dirInt * (roadLength + 8);
 
         if (rooms > 0)
-            Invoke("RoadCycle", 2);
+            RoadCycle();
         else
             OnRoadsDone();
     }
 
     private void OnRoadsDone()
     {
-        BuildRoom(Vector3Int.zero, Random.Range(4, 4 + roadLength / 2), Random.Range(4, 4 + roadLength / 2));
+        var rom = BuildRoom(Vector3Int.zero, Random.Range(4, 4 + roadLength / 2), Random.Range(4, 4 + roadLength / 2), true);
 
         foreach (Vector3Int roomPoint in roomPoints)
         {
-            BuildRoom(roomPoint, Random.Range(4, 4 + roadLength / 2), Random.Range(4, 4 + roadLength / 2));
+            rom = BuildRoom(roomPoint, Random.Range(4, 4 + roadLength / 2), Random.Range(4, 4 + roadLength / 2));
         }
+
+        rom.isExit = true;
     }
 
-    private void BuildRoom(Vector3Int coord, int halfHeight, int halfWidth)
+    private Room BuildRoom(Vector3Int coord, int halfHeight, int halfWidth, bool isStartRoom = false)
     {
         for(int x = -halfWidth; x <= halfWidth; x++)
         {
@@ -87,7 +91,7 @@ public class Level : MonoBehaviour
                 {
                     if (Mathf.Abs(x) <= 1 || Mathf.Abs(y) <= 1)
                     {
-                        if(tilemap.GetTile(new Vector3Int(x, y, 0))!=null)
+                        if(tilemap.GetTile(coord + new Vector3Int(x, y, 0))!=null)
                             tilemap.SetTile(coord + new Vector3Int(x, y, 0), floor);
                         else
                             tilemap.SetTile(coord + new Vector3Int(x, y, 0), wall);
@@ -104,7 +108,21 @@ public class Level : MonoBehaviour
             }
         }
 
-        
+        if (!isStartRoom)
+        {
+            var rom = Instantiate(roomObject, (Vector3)coord + new Vector3(0.5f, 0.5f), transform.rotation, transform);
+
+            rom.GetComponent<Room>().lvl = this;
+
+            rom.GetComponent<Room>().coord = coord;
+            rom.GetComponent<Room>().halfHeight = halfHeight;
+            rom.GetComponent<Room>().halfWidth = halfWidth;
+            rom.GetComponent<Room>().tilemap = tilemap;
+
+            return rom.GetComponent<Room>();
+        }
+
+        return null;
     }
 
     private void BuildRoad(Vector3Int from, Vector2Int dir)

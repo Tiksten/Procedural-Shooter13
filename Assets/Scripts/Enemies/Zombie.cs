@@ -9,6 +9,9 @@ public class Zombie : MonoBehaviour
     private Rigidbody2D rb;
 
     [SerializeField]
+    private GameObject coin;
+
+    [SerializeField]
     private float dmg = 20;
 
     [SerializeField]
@@ -45,5 +48,16 @@ public class Zombie : MonoBehaviour
     private void Reset()
     {
         canDmg = true;
+    }
+
+    private void OnDestroy()
+    {
+        if (GetComponent<Health>().hp <= 0)
+        {
+            for (var i = Random.Range(1, 5); i > 0; i--)
+            {
+                Instantiate(coin, transform.position + (Vector3)Random.insideUnitCircle * 2, transform.rotation);
+            }
+        }
     }
 }

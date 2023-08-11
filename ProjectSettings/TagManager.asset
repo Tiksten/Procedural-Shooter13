@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Weapon
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Projectile
   - Water
   - UI
   - 
@@ -40,6 +41,9 @@ TagManager:
   m_SortingLayers:
   - name: Level
     uniqueID: 2250266677
+    locked: 0
+  - name: Bodies
+    uniqueID: 2102574491
     locked: 0
   - name: Default
     uniqueID: 0

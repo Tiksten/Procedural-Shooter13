@@ -23,6 +23,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(input * acceleration, ForceMode2D.Impulse);
+        rb.AddForce(input.normalized * acceleration, ForceMode2D.Impulse);
     }
 }
