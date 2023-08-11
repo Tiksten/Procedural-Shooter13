@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6706725726793482054}
   - component: {fileID: 3437752999759649865}
-  - component: {fileID: 5189293129511160101}
+  - component: {fileID: 1132256410269831314}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Weapon
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5189293129511160101
+--- !u!114 &1132256410269831314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,10 +94,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 351909724984301871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d27d34229bd192e4fbd219785cf174fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 4710ee01a8699974ea7ff7383d5a1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consumesAmmo: 4
   bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
+  cycletime: 0.02
+  inaccuracy: 0.1
+  pellets: 1
+  isFullAuto: 0
 --- !u!1 &3010855027572666756
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +237,8 @@ GameObject:
   - component: {fileID: 3010855027577535084}
   - component: {fileID: 1461828860874699832}
   - component: {fileID: 9213540204377695257}
+  - component: {fileID: 2112669758102769505}
+  - component: {fileID: 2152483704508238982}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -399,6 +406,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 4473420801879090829}
+--- !u!114 &2112669758102769505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010855027577535094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c6c6a557609bb469da94456c939275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneAmmoTime: 0.2
+  maxAmmo: 100
+  currAmmo: 0
+  slider: {fileID: 0}
+--- !u!114 &2152483704508238982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010855027577535094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1628b84ec72d9514483f0e19fd8caad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  oneHpTime: 0.5
 --- !u!1 &4248712752848114287
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 833442796618044086}
   - component: {fileID: 6017974528388493138}
-  - component: {fileID: 676147154754790369}
+  - component: {fileID: 634079445229260577}
   m_Layer: 0
   m_Name: GoogleGun
   m_TagString: Weapon
@@ -545,7 +582,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &676147154754790369
+--- !u!114 &634079445229260577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -554,9 +591,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6165529056732189633}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce9578ccd530a42498fcae54135ad42a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4710ee01a8699974ea7ff7383d5a1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consumesAmmo: 10
   bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
-  pellets: 5
+  cycletime: 0.4
   inaccuracy: 0.6
+  pellets: 5
+  isFullAuto: 0
