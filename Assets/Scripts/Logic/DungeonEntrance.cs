@@ -14,5 +14,7 @@ public class DungeonEntrance : MonoBehaviour
             return;
 
         SceneManager.LoadScene(sceneIndex);
+
+        collision.transform.position = Vector3.zero;
     }
 }

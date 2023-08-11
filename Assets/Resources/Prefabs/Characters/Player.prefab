@@ -97,6 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4710ee01a8699974ea7ff7383d5a1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 20
+  bulletSpeed: 15
+  bulletSize: 1
   consumesAmmo: 4
   bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
   cycletime: 0.02
@@ -594,6 +597,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4710ee01a8699974ea7ff7383d5a1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 15
+  bulletSpeed: 8
+  bulletSize: 0.6
   consumesAmmo: 10
   bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
   cycletime: 0.4

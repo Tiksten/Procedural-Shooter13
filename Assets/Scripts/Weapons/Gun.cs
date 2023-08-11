@@ -5,6 +5,15 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     [SerializeField]
+    private float dmg = 20;
+
+    [SerializeField]
+    private float bulletSpeed = 15;
+
+    [SerializeField]
+    private float bulletSize = 1;
+
+    [SerializeField]
     private int consumesAmmo = 1;
 
     private Ammo ammo;
@@ -42,7 +51,10 @@ public class Gun : MonoBehaviour
                 ammo.currAmmo-=consumesAmmo;
                 for (var i = pellets; i > 0; i--)
                 {
-                    Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, transform.up + (Vector3)Random.insideUnitCircle * inaccuracy));
+                    var b = Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, transform.up + (Vector3)Random.insideUnitCircle * inaccuracy)).GetComponent<Bullet>();
+                    b.transform.localScale = Vector3.one * bulletSize;
+                    b.dmg = dmg;
+                    b.velocity = bulletSpeed;
                 }
                 Invoke("Reset", cycletime);
             }
@@ -52,7 +64,10 @@ public class Gun : MonoBehaviour
                 ammo.currAmmo -= consumesAmmo;
                 for (var i = pellets; i > 0; i--)
                 {
-                    Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, transform.up + (Vector3)Random.insideUnitCircle * inaccuracy));
+                    var b = Instantiate(bullet, transform.position, Quaternion.FromToRotation(Vector3.up, transform.up + (Vector3)Random.insideUnitCircle * inaccuracy)).GetComponent<Bullet>();
+                    b.transform.localScale = Vector3.one * bulletSize;
+                    b.dmg = dmg;
+                    b.velocity = bulletSpeed;
                 }
                 Invoke("Reset", cycletime);
             }

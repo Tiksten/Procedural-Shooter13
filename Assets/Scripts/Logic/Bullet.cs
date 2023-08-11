@@ -5,11 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
-    [SerializeField]
-    private float velocity = 5;
+    public float velocity = 5;
 
-    [SerializeField]
-    private float dmg = 20;
+    public float dmg = 20;
 
     private void Start()
     {

@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponPickUp : MonoBehaviour
 {
+    [SerializeField]
+    private Text text;
+
     [SerializeField]
     private Transform hand;
 
@@ -14,12 +18,25 @@ public class WeaponPickUp : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && currSelected != null)
         {
+            if(currSelected.GetComponent<Price>()!=null)
+            {
+                if (currSelected.GetComponent<Price>().price > PlayerPrefs.GetInt("Coins", 0))
+                    return;
+            }
+
             SwitchGuns();
         }
     }
 
     private void SwitchGuns()
     {
+        if (currSelected.GetComponent<Price>() != null)
+        {
+            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) - currSelected.GetComponent<Price>().price);
+            Destroy(currSelected.GetComponent<Price>());
+            FindObjectOfType<Coins>().UpdateText();
+        }
+
         Transform gunToDrop = null;
 
         foreach(Transform gun in hand.transform)
@@ -51,6 +68,11 @@ public class WeaponPickUp : MonoBehaviour
         Destroy(currSelected.GetComponent<BoxCollider2D>());
 
         currSelected = gunToDrop;
+
+        if (currSelected.GetComponent<Price>() != null)
+            text.text = (currSelected.name + " Price:" + currSelected.GetComponent<Price>().price.ToString());
+        else
+            text.text = currSelected.name;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -58,6 +80,11 @@ public class WeaponPickUp : MonoBehaviour
         if(collision.tag == "Weapon" && currSelected == null)
         {
             currSelected = collision.transform;
+
+            if (currSelected.GetComponent<Price>() != null)
+                text.text = (currSelected.name + " Price:" + currSelected.GetComponent<Price>().price.ToString());
+            else
+                text.text = currSelected.name;
         }
     }
 
@@ -66,6 +93,7 @@ public class WeaponPickUp : MonoBehaviour
         if (collision.tag == "Weapon" && currSelected == collision.transform)
         {
             currSelected = null;
+            text.text = "";
         }
     }
 }
