@@ -49,7 +49,7 @@ public class WeaponPickUp : MonoBehaviour
         }
 
         foreach (MonoBehaviour comp in gunToDrop.GetComponents<MonoBehaviour>())
-        { 
+        {
             if(!(comp is SpriteRenderer || comp is BoxCollider2D))
                 comp.enabled = false;
         }
@@ -58,13 +58,15 @@ public class WeaponPickUp : MonoBehaviour
         gunToDrop.position = currSelected.position;
         gunToDrop.rotation = currSelected.rotation;
         gunToDrop.AddComponent<BoxCollider2D>().isTrigger = true;
+        gunToDrop.GetComponent<SpriteRenderer>().sortingLayerName = "Loot";
 
         foreach (MonoBehaviour comp in currSelected.GetComponents<MonoBehaviour>())
             comp.enabled = true;
 
         currSelected.transform.parent = hand.transform;
         currSelected.transform.localPosition = Vector3.zero;
-        currSelected.transform.localRotation = Quaternion.identity;
+        currSelected.transform.localRotation = Quaternion.FromToRotation(Vector3.right, Vector3.up);
+        currSelected.GetComponent<SpriteRenderer>().sortingLayerName = "Defalut";
         Destroy(currSelected.GetComponent<BoxCollider2D>());
 
         currSelected = gunToDrop;
@@ -74,7 +76,7 @@ public class WeaponPickUp : MonoBehaviour
         else
             text.text = currSelected.name;
     }
-
+     
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Weapon" && currSelected == null)

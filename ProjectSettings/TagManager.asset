@@ -45,6 +45,12 @@ TagManager:
   - name: Bodies
     uniqueID: 2102574491
     locked: 0
+  - name: Loot
+    uniqueID: 3200596719
+    locked: 0
+  - name: Player
+    uniqueID: 1724890397
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

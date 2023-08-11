@@ -15,7 +15,7 @@ public class Hand : MonoBehaviour
     {
         var dir = (Vector3.Scale(cam.ScreenToWorldPoint(Input.mousePosition, Camera.MonoOrStereoscopicEye.Mono) - transform.parent.position, new Vector3(1, 1))).normalized;
 
-        transform.localPosition = dir * 0.4f;
+        transform.localPosition = dir * 0.5f;
 
         transform.rotation = Quaternion.FromToRotation(Vector3.up, dir);
     }

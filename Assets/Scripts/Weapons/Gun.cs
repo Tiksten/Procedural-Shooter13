@@ -55,7 +55,7 @@ public class Gun : MonoBehaviour
                 
                 for (var i = pellets; i > 0; i--)
                 {
-                    Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.up + (Vector3)Random.insideUnitCircle * inaccuracy);
+                    Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.right + (Vector3)Random.insideUnitCircle * inaccuracy);
                     
                     CameraShaker.Instance.Recoil(newBulletRotation * Vector3.up, shakeAmplitude);
 
@@ -74,9 +74,12 @@ public class Gun : MonoBehaviour
                 
                 for (var i = pellets; i > 0; i--)
                 {
-                    Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.up + (Vector3)Random.insideUnitCircle * inaccuracy);
-                    CameraShaker.Instance.Recoil(newBulletRotation*Vector3.up, shakeAmplitude);
+                    Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.right + (Vector3)Random.insideUnitCircle * inaccuracy);
+
+                    CameraShaker.Instance.Recoil(newBulletRotation * Vector3.up, shakeAmplitude);
+
                     var b = Instantiate(bullet, transform.position, newBulletRotation).GetComponent<Bullet>();
+
                     b.transform.localScale = Vector3.one * bulletSize;
                     b.dmg = dmg;
                     b.velocity = bulletSpeed;
