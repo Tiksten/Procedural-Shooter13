@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//delete me
 public class Ammo : MonoBehaviour
 {
     [SerializeField]
