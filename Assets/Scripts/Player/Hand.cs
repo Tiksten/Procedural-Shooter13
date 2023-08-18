@@ -6,9 +6,12 @@ public class Hand : MonoBehaviour
 {
     private Camera cam;
 
+    private SpriteRenderer rend;
+
     private void Start()
     {
         cam = FindObjectOfType<Camera>();    
+        rend = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -17,6 +20,8 @@ public class Hand : MonoBehaviour
 
         transform.localPosition = dir * 0.5f;
 
-        transform.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+        transform.rotation = Quaternion.FromToRotation(Vector3.right, dir);
+
+        rend.flipY = dir.x < 0;
     }
 }

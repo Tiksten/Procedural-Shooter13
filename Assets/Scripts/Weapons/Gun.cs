@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite sprite;
+
     [SerializeField]
     private float dmg = 20;
 
@@ -40,8 +44,16 @@ public class Gun : MonoBehaviour
 
     private void OnEnable()
     {
+        transform.parent.GetComponent<SpriteRenderer>().sprite = sprite;
+        GetComponent<SpriteRenderer>().enabled = false;
         canFire = true;
         ammo = FindObjectOfType<Ammo>();
+    }
+
+    private void OnDisable()
+    {
+        if(transform.parent == null)
+            GetComponent<SpriteRenderer>().enabled = true;
     }
 
     private void Update()
@@ -56,7 +68,7 @@ public class Gun : MonoBehaviour
                 for (var i = pellets; i > 0; i--)
                 {
                     Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.right + (Vector3)Random.insideUnitCircle * inaccuracy);
-                    
+
                     CameraShaker.Instance.Recoil(newBulletRotation * Vector3.up, shakeAmplitude);
 
                     var b = Instantiate(bullet, transform.position, newBulletRotation).GetComponent<Bullet>();

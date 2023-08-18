@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WeaponPickUp : MonoBehaviour
@@ -60,12 +61,13 @@ public class WeaponPickUp : MonoBehaviour
         gunToDrop.AddComponent<BoxCollider2D>().isTrigger = true;
         gunToDrop.GetComponent<SpriteRenderer>().sortingLayerName = "Loot";
 
+        currSelected.transform.parent = hand.transform;
+
         foreach (MonoBehaviour comp in currSelected.GetComponents<MonoBehaviour>())
             comp.enabled = true;
 
-        currSelected.transform.parent = hand.transform;
         currSelected.transform.localPosition = Vector3.zero;
-        currSelected.transform.localRotation = Quaternion.FromToRotation(Vector3.right, Vector3.up);
+        currSelected.transform.localRotation = Quaternion.identity;
         currSelected.GetComponent<SpriteRenderer>().sortingLayerName = "Defalut";
         Destroy(currSelected.GetComponent<BoxCollider2D>());
 
@@ -75,6 +77,8 @@ public class WeaponPickUp : MonoBehaviour
             text.text = (currSelected.name + " Price:" + currSelected.GetComponent<Price>().price.ToString());
         else
             text.text = currSelected.name;
+
+        SceneManager.MoveGameObjectToScene(currSelected.gameObject, SceneManager.GetActiveScene());
     }
      
     private void OnTriggerEnter2D(Collider2D collision)
