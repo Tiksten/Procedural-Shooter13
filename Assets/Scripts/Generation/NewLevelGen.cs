@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 
 public class NewLevelGen : MonoBehaviour
@@ -35,6 +36,10 @@ public class NewLevelGen : MonoBehaviour
     private Vector2 tileSens = new Vector2(0, 0.4f);
 
 
+    [SerializeField]
+    private UnityEvent OnLevelReady;
+
+
 
     private Vector2 centre;
 
@@ -67,6 +72,9 @@ public class NewLevelGen : MonoBehaviour
 
 
         ApplyTexture(Normalize(Mix(caves, sphere, Multiply)));
+
+        if (OnLevelReady != null)
+            OnLevelReady.Invoke();
     }
 
     private Texture2D CreateTexture()

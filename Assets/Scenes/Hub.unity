@@ -3411,16 +3411,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4710ee01a8699974ea7ff7383d5a1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
   dmg: 12
   bulletSpeed: 15
-  bulletSize: 0.8
+  bulletSize: 0.5
   consumesAmmo: 2
   bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
   cycletime: 0.1
   inaccuracy: 0.2
   pellets: 1
-  shakeAmplitude: 1
+  shakeAmplitude: 0.3
   isFullAuto: 1
 --- !u!114 &1755227133
 MonoBehaviour:
@@ -3482,10 +3481,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4393278385902409653, guid: 226b02326f0a8d149921781b51ee93f3, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4393278385904852154, guid: 226b02326f0a8d149921781b51ee93f3, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0

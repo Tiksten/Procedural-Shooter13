@@ -6,9 +6,6 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     [SerializeField]
-    private Sprite sprite;
-
-    [SerializeField]
     private float dmg = 20;
 
     [SerializeField]
@@ -44,16 +41,10 @@ public class Gun : MonoBehaviour
 
     private void OnEnable()
     {
-        transform.parent.GetComponent<SpriteRenderer>().sprite = sprite;
-        GetComponent<SpriteRenderer>().enabled = false;
         canFire = true;
         ammo = FindObjectOfType<Ammo>();
-    }
 
-    private void OnDisable()
-    {
-        if(transform.parent == null)
-            GetComponent<SpriteRenderer>().enabled = true;
+        GetComponentInParent<Hand>().rend = GetComponent<SpriteRenderer>();
     }
 
     private void Update()

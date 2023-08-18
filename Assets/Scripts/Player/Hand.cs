@@ -6,7 +6,8 @@ public class Hand : MonoBehaviour
 {
     private Camera cam;
 
-    private SpriteRenderer rend;
+    [HideInInspector]
+    public SpriteRenderer rend;
 
     private void Start()
     {
@@ -20,8 +21,9 @@ public class Hand : MonoBehaviour
 
         transform.localPosition = dir * 0.5f;
 
-        transform.rotation = Quaternion.FromToRotation(Vector3.right, dir);
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, dir);
 
-        rend.flipY = dir.x < 0;
+        if(rend != null)
+            rend.flipY = dir.x < 0;
     }
 }

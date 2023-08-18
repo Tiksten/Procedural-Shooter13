@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 108081646}
   - component: {fileID: 108081647}
+  - component: {fileID: 108081648}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -183,6 +184,39 @@ MonoBehaviour:
   spagettiScale: 0.05
   spagettiValue: 0.1
   tileSens: {x: 0, y: 0.3}
+  OnLevelReady:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 108081648}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &108081648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108081645}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ac24b71390ae749afbe1b7d80f6234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exit: {fileID: 1141457763302793808, guid: ad680a54ea50cc04db9f629f8cd72759, type: 3}
+  iterations: 16
+  dist: 100
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &1530045081
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,3 +538,53 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &2081460743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081460744}
+  - component: {fileID: 2081460745}
+  m_Layer: 0
+  m_Name: EnemiesSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2081460744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081460743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1247989, y: 0.6354854, z: -0.030186083}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081460745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081460743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b417ff62a473b4697c55cad0199864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDist: {x: 10, y: 15}
+  enemies:
+  - {fileID: 4597564244847766225, guid: 9c24963cd5c34d846b1a0d14339cbcd1, type: 3}
+  tickTime: 1
+  maxDist: 30
+  maxEnemies: 12

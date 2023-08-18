@@ -5,6 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject hitWall;
+
+    [SerializeField]
+    private GameObject hitBody;
+
     public float velocity = 5;
 
     public float dmg = 20;
@@ -17,9 +23,16 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.GetComponent<Health>() != null)
-            collision.collider.GetComponent<Health>().RecieveDmg(dmg);
+        var effect = hitWall;
 
+        if (collision.collider.GetComponent<Health>() != null)
+        {
+            collision.collider.GetComponent<Health>().RecieveDmg(dmg);
+            effect = hitBody;
+        }
+        
+        Destroy(Instantiate(effect, transform.position, Quaternion.FromToRotation(Vector3.up, (Vector3)collision.contacts[0].normal)), 2);
+        
         Destroy(gameObject);
     }
 }
