@@ -5,42 +5,18 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField]
-    private float dmg = 20;
+    public SettingsStructLib.GunData stats;
 
-    [SerializeField]
-    private float bulletSpeed = 15;
-
-    [SerializeField]
-    private float bulletSize = 1;
-
-    [SerializeField]
-    private int consumesAmmo = 1;
 
     private Ammo ammo;
 
-    [SerializeField]
-    private GameObject bullet;
-
-    [SerializeField]
-    private float cycletime = 0.1f;
-
-    [SerializeField]
-    private float inaccuracy = 0.6f;
-
-    [SerializeField]
-    private int pellets = 5;
-
-    [SerializeField]
-    private float shakeAmplitude = 1.0f;
-
     private bool canFire;
-
-    [SerializeField]
-    private bool isFullAuto;
 
     private void OnEnable()
     {
+        if (transform.parent == null)
+            return;
+
         canFire = true;
         ammo = FindObjectOfType<Ammo>();
 
@@ -49,45 +25,45 @@ public class Gun : MonoBehaviour
 
     private void Update()
     {
-        if (canFire && ammo.currAmmo > consumesAmmo)
+        if (canFire && ammo.currAmmo > stats.consumesAmmo)
         {
-            if (Input.GetKey(KeyCode.Mouse0) && isFullAuto)
+            if (Input.GetKey(KeyCode.Mouse0) && stats.isFullAuto)
             {
                 canFire = false;
-                ammo.currAmmo-=consumesAmmo;
+                ammo.currAmmo-= stats.consumesAmmo;
                 
-                for (var i = pellets; i > 0; i--)
+                for (var i = stats.pellets; i > 0; i--)
                 {
-                    Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.right + (Vector3)Random.insideUnitCircle * inaccuracy);
+                    Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.right + (Vector3)Random.insideUnitCircle * stats.inaccuracy);
 
-                    CameraShaker.Instance.Recoil(newBulletRotation * Vector3.up, shakeAmplitude);
+                    CameraShaker.Instance.Recoil(newBulletRotation * Vector3.up, stats.shakeAmplitude);
 
-                    var b = Instantiate(bullet, transform.position, newBulletRotation).GetComponent<Bullet>();
+                    var b = Instantiate(stats.bullet, transform.position, newBulletRotation).GetComponent<Bullet>();
                     
-                    b.transform.localScale = Vector3.one * bulletSize;
-                    b.dmg = dmg;
-                    b.velocity = bulletSpeed;
+                    b.transform.localScale = Vector3.one * stats.bulletSize;
+                    b.dmg = stats.dmg;
+                    b.velocity = stats.bulletSpeed;
                 }
-                Invoke("Reset", cycletime);
+                Invoke("Reset", stats.cycletime);
             }
-            else if (Input.GetKeyDown(KeyCode.Mouse0) && !isFullAuto)
+            else if (Input.GetKeyDown(KeyCode.Mouse0) && !stats.isFullAuto)
             {
                 canFire = false;
-                ammo.currAmmo -= consumesAmmo;
+                ammo.currAmmo -= stats.consumesAmmo;
                 
-                for (var i = pellets; i > 0; i--)
+                for (var i = stats.pellets; i > 0; i--)
                 {
-                    Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.right + (Vector3)Random.insideUnitCircle * inaccuracy);
+                    Quaternion newBulletRotation = Quaternion.FromToRotation(Vector3.up, transform.right + (Vector3)Random.insideUnitCircle * stats.inaccuracy);
 
-                    CameraShaker.Instance.Recoil(newBulletRotation * Vector3.up, shakeAmplitude);
+                    CameraShaker.Instance.Recoil(newBulletRotation * Vector3.up, stats.shakeAmplitude);
 
-                    var b = Instantiate(bullet, transform.position, newBulletRotation).GetComponent<Bullet>();
+                    var b = Instantiate(stats.bullet, transform.position, newBulletRotation).GetComponent<Bullet>();
 
-                    b.transform.localScale = Vector3.one * bulletSize;
-                    b.dmg = dmg;
-                    b.velocity = bulletSpeed;
+                    b.transform.localScale = Vector3.one * stats.bulletSize;
+                    b.dmg = stats.dmg;
+                    b.velocity = stats.bulletSpeed;
                 }
-                Invoke("Reset", cycletime);
+                Invoke("Reset", stats.cycletime);
             }
         }
     }

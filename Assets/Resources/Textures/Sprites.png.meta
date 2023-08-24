@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun1
+      name: Default
       rect:
         serializedVersion: 2
         x: 65
@@ -407,7 +407,7 @@ TextureImporter:
         width: 11
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -428,7 +428,7 @@ TextureImporter:
         width: 4
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -449,7 +449,7 @@ TextureImporter:
         width: 4
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -457,6 +457,321 @@ TextureImporter:
       bones: []
       spriteID: 0e97029f661edb54e809e1660d0297d5
       internalID: -962562288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nailgun
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 70
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1557a0605a6b640a0d9fabe59d0bb2
+      internalID: 2141302827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oneshot
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 62
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bca4d17e9f8274408a1d9d1037f2371
+      internalID: -1049393737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glock
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 56
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc43bd5a98aa8848ab06db89603b2cd
+      internalID: 1822089285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beretta
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 49
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0196d4183719af842b343d3e8e17c97c
+      internalID: 1606858137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USP
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 42
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4a877500b2ef141aff88e796230d74
+      internalID: 538539519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tec9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 33
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d6142746a38f44d83a598733d520f6
+      internalID: 714223352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CZ
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 25
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9c9e7e936355d4daa6c1710b6e7ff5
+      internalID: -1211173553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deagle
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 16
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23de29e644655744eb2cb5806c2c0fa5
+      internalID: 1363922414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnum
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 8
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9080423adad3e94e9d9812983e7f79a
+      internalID: -1327777722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MAC10
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 68
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579bbdb6ce38db646a1bd21f1a357ea1
+      internalID: 519118194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP9
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 60
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5861fb95236abbb4181e5682541ca489
+      internalID: -1582391909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 49
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92a0b154edf84a4a9b0a2fa82fbdadd
+      internalID: -107076100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P90
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 40
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccdee3212db617043b3a7dd25ed6b054
+      internalID: 1361725092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 30
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0eb235f44ca114c86c5da6e2699cad
+      internalID: 926152317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honeybadger
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 21
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1971e907070a662438e0220199196225
+      internalID: 1586789339
       vertices: []
       indices: 
       edges: []
@@ -474,19 +789,35 @@ TextureImporter:
     nameFileIdTable:
       Enemy: -1312229026
       Gun4: -1085181408
+      MAC10: 519118194
+      Deagle: 1363922414
       Gun8: 465304947
+      Beretta: 1606858137
       Gun10: 603538736
+      MP5: -107076100
       Gun11: 797793281
+      Sprites_0: -613382119
+      Oneshot: -1049393737
       Bullet: -733810120
-      Gun1: 264444957
+      Glock: 1822089285
+      CZ: -1211173553
+      Nailgun: 2141302827
+      USP: 538539519
+      MP7: 926152317
       Player: 469840977
       DungeonExit: 434574176
       Coin: -962562288
       Gun: 1880967981
       Gun9: 279614748
       Gun6: 410385814
+      Honeybadger: 1586789339
       Gun5: -1114553326
+      Tec9: 714223352
+      Default: 264444957
+      Magnum: -1327777722
       Gun3: -418407799
+      MP9: -1582391909
+      P90: 1361725092
       Gun7: -1896873566
       Gun2: 870398606
   spritePackingTag: 
