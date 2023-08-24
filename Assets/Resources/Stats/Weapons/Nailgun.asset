@@ -17,10 +17,10 @@ MonoBehaviour:
     cycletime: 0.1
     isFullAuto: 1
     pellets: 1
-    inaccuracy: 0.1
-    price: 100
+    inaccuracy: 0.2
+    price: 0
     consumesAmmo: 3
-    shakeAmplitude: 0.15
+    shakeAmplitude: 0.05
     bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
-    bulletSpeed: 10
-    bulletSize: 0.2
+    bulletSpeed: 15
+    bulletSize: 0.1

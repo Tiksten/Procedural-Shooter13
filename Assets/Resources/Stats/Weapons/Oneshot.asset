@@ -18,9 +18,9 @@ MonoBehaviour:
     isFullAuto: 0
     pellets: 3
     inaccuracy: 0.3
-    price: 100
+    price: 0
     consumesAmmo: 17
-    shakeAmplitude: 0.15
+    shakeAmplitude: 0.3
     bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
     bulletSpeed: 8
     bulletSize: 0.1
