@@ -5,7 +5,7 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 
 
-
+[Serializable]
 public class SettingsStructLib
 {
     [Serializable]
@@ -80,8 +80,10 @@ public class SettingsStructLib
     }
 }
 
+[Serializable]
 [CreateAssetMenu(fileName = "Gun", menuName = "Stats")]
 public class GunStats : ScriptableObject
 {
+    [SerializeField]
     public SettingsStructLib.GunData gunData;
 }

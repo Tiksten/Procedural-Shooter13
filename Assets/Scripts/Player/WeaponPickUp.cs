@@ -72,7 +72,7 @@ public class WeaponPickUp : MonoBehaviour
         currSelected.GetComponent<SpriteRenderer>().sortingLayerName = "Defalut";
         Destroy(currSelected.GetComponent<BoxCollider2D>());
 
-        SceneManager.MoveGameObjectToScene(currSelected.gameObject, SceneManager.GetActiveScene());
+        SceneManager.MoveGameObjectToScene(gunToDrop.gameObject, SceneManager.GetActiveScene());
 
         currSelected = null;
     }

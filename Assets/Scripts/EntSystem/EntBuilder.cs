@@ -27,11 +27,12 @@ public class EntBuilder : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().size = Vector2.one * 0.64f;
 
 
-            gameObject.AddComponent<Gun>().enabled = false;
+            gameObject.AddComponent<Gun>();
             if (Resources.Load<GunStats>("Stats/Weapons/" + name) != null)
                 gameObject.GetComponent<Gun>().stats = Resources.Load<GunStats>("Stats/Weapons/" + name).gunData;
             else
                 gameObject.GetComponent<Gun>().stats = SettingsStructLib.GunData.def;
+            gameObject.GetComponent<Gun>().enabled = false;
 
 
             gameObject.AddComponent<SpriteRenderer>();

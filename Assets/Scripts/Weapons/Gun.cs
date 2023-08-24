@@ -12,10 +12,21 @@ public class Gun : MonoBehaviour
 
     private bool canFire;
 
+    private void OnDisable()
+    {
+        if (GetComponent<Price>() == null && stats.price > 0 && transform.parent.GetComponent<WeaponSwitch>() == null)
+        {
+            gameObject.AddComponent<Price>().price = stats.price;
+            stats.price = 0;
+        }
+    }
+
     private void OnEnable()
     {
-        if (transform.parent == null)
+        if (transform.parent.GetComponent<WeaponSwitch>() == null)
+        {
             return;
+        }
 
         canFire = true;
         ammo = FindObjectOfType<Ammo>();
