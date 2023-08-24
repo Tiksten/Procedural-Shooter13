@@ -178,7 +178,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 770b65e0202d7bf45a98b1f466ada85a, type: 2}
   - {fileID: 11400000, guid: 7e4098b50cf0c5e43a590faca0482b86, type: 2}
   tilemap: {fileID: 1800029722}
-  textureRes: 256
+  textureRes: 128
   decorScale: 0.1
   roomScale: 0.025
   spagettiScale: 0.05

@@ -41,6 +41,8 @@ public class NewLevelGen : MonoBehaviour
 
 
 
+    private float seed;
+
     private Vector2 centre;
 
     private float radius;
@@ -51,6 +53,8 @@ public class NewLevelGen : MonoBehaviour
 
     private void OnEnable()
     {
+        seed = Random.value*100000f;
+
         centre = Vector2.one * textureRes / 2;
 
         radius = textureRes / 2;
@@ -103,13 +107,13 @@ public class NewLevelGen : MonoBehaviour
     private float DrawSphere(Vector2 pos)
     {
         var dist = (pos - centre).magnitude;
-        
+
         return Mathf.Sqrt(Mathf.Clamp01((radius - dist) / radius));
     }
 
     private float DrawSpagetti(Vector2 pos)
     {
-        var value = Mathf.PerlinNoise(pos.x * spagettiScale, pos.y * spagettiScale);
+        var value = Mathf.PerlinNoise((pos.x + seed) * spagettiScale, (pos.y + seed) * spagettiScale);
 
         if (value < 0.6f && value > 0.4f)
         {
@@ -121,12 +125,12 @@ public class NewLevelGen : MonoBehaviour
 
     private float DrawPerlinRooms(Vector2 pos)
     {
-        return Mathf.PerlinNoise(pos.x * roomScale, pos.y * roomScale);
+        return Mathf.PerlinNoise((pos.x + seed) * roomScale, (pos.y + seed) * roomScale);
     }
 
     private float DrawPerlinDecorative(Vector2 pos)
     {
-        return Mathf.PerlinNoise(pos.x * decorScale, pos.y * decorScale);
+        return Mathf.PerlinNoise((pos.x + seed) * decorScale, (pos.y + seed) * decorScale);
     }
 
     private Texture2D Iterate(Texture2D texture, GenFunc genFunc)

@@ -58,6 +58,7 @@ public class WeaponPickUp : MonoBehaviour
         gunToDrop.parent = null;
         gunToDrop.position = currSelected.position;
         gunToDrop.rotation = currSelected.rotation;
+        gunToDrop.localScale = Vector3.one;
         gunToDrop.AddComponent<BoxCollider2D>().isTrigger = true;
         gunToDrop.GetComponent<SpriteRenderer>().sortingLayerName = "Loot";
 
@@ -71,14 +72,9 @@ public class WeaponPickUp : MonoBehaviour
         currSelected.GetComponent<SpriteRenderer>().sortingLayerName = "Defalut";
         Destroy(currSelected.GetComponent<BoxCollider2D>());
 
-        currSelected = gunToDrop;
-
-        if (currSelected.GetComponent<Price>() != null)
-            text.text = (currSelected.name + " Price:" + currSelected.GetComponent<Price>().price.ToString());
-        else
-            text.text = currSelected.name;
-
         SceneManager.MoveGameObjectToScene(currSelected.gameObject, SceneManager.GetActiveScene());
+
+        currSelected = null;
     }
      
     private void OnTriggerEnter2D(Collider2D collision)
