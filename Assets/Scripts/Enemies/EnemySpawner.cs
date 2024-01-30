@@ -13,29 +13,33 @@ public class EnemySpawner : MonoBehaviour
     private List<GameObject> enemies;
 
     [SerializeField]
-    private float tickTime = 1;
+    private AnimationCurve tickTime;
 
     private Transform player;
 
     public float maxDist = 30;
 
     [SerializeField]
-    private int maxEnemies = 12;
+    private AnimationCurve maxEnemies;
 
     private int totalEnemies = 0;
+
+    private float currTime;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        Invoke("Tick", tickTime);
+        Invoke("Tick", tickTime.Evaluate(currTime));
     }
 
     private void Tick()
     {
-        if (totalEnemies < maxEnemies)
+        if (totalEnemies < maxEnemies.Evaluate(currTime))
             TrySpawnEnemy();
 
-        Invoke("Tick", tickTime);
+        currTime += tickTime.Evaluate(currTime);
+
+        Invoke("Tick", tickTime.Evaluate(currTime));
     }
 
     private void TrySpawnEnemy()
