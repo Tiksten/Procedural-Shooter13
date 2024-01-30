@@ -34,8 +34,7 @@ public class EntBuilder : MonoBehaviour
     {
         if(type == EntType.Gun)
         {
-            if (gameObject.GetComponent<SpriteRenderer>() != null)
-                Destroy(gameObject.GetComponent<SpriteRenderer>());
+            //Destroy(gameObject.GetComponent<SpriteRenderer>());
 
             gameObject.tag = "Weapon";
 
@@ -52,12 +51,12 @@ public class EntBuilder : MonoBehaviour
             gameObject.GetComponent<Gun>().enabled = false;
 
 
-            gameObject.AddComponent<SpriteRenderer>();
-            if (Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name) != null)
-                gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name);
-            else
-                gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite("Default");
-            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Loot";
+            //gameObject.AddComponent<SpriteRenderer>();
+            //if (Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name) != null)
+            //    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name);
+            //else
+            //    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite("Default");
+            //gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Loot";
         }
         if (type == EntType.Enemy)
         {
