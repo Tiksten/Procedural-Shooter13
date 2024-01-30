@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
 
         if (hp <= 0)
         {
-            Destroy(Instantiate(deadBody, transform.position, transform.rotation), 5);
+            Destroy(Instantiate(deadBody, transform.position, transform.rotation), 12);
             Destroy(gameObject);
         }
     }

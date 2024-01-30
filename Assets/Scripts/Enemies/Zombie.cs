@@ -20,10 +20,16 @@ public class Zombie : MonoBehaviour
     [SerializeField]
     private float acceleration = 1;
 
+    [SerializeField]
+    private Vector2Int coinCount = new Vector2Int(1, 5);
+
     private bool canDmg;
+
+    private AudioSource audioSource;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         canDmg = true;
@@ -39,6 +45,8 @@ public class Zombie : MonoBehaviour
     {
         if(collision.collider.tag == "Player" && canDmg)
         {
+            audioSource.PlayOneShot(Resources.Load<AudioClip>("Sounds/Battle/Bite"));
+
             canDmg = false;
             collision.collider.GetComponent<Health>().RecieveDmg(dmg);
             Invoke("Reset", cycletime);
@@ -54,7 +62,7 @@ public class Zombie : MonoBehaviour
     {
         if (GetComponent<Health>().hp <= 0)
         {
-            for (var i = Random.Range(1, 5); i > 0; i--)
+            for (var i = Random.Range(coinCount.x, coinCount.y); i > 0; i--)
             {
                 Instantiate(coin, transform.position + (Vector3)Random.insideUnitCircle * 2, transform.rotation);
             }

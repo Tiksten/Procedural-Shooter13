@@ -29,6 +29,11 @@ public class Roaming : MonoBehaviour
         currTarget = transform.position;
         rb = GetComponent<Rigidbody2D>();
         Invoke("Tick", 1);
+
+        if(Random.value < 0.1f)
+        {
+            GetComponent<AudioSource>().PlayOneShot(Resources.Load<AudioClip>("Sounds/Zombie/" + Random.Range(1, 4).ToString()));
+        }    
     }
 
     private void Tick()

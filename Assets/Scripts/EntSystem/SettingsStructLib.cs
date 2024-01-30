@@ -36,6 +36,26 @@ public class SettingsStructLib
 
         public float bulletSize;
 
+        public GunShotSound gunShotSound;
+
+        public GunEquipSound gunEquipSound;
+
+
+        public enum GunShotSound
+        {
+            Pistol,
+            Rifle,
+            Deagle,
+            Shotgun,
+            BigGun
+        }
+
+        public enum GunEquipSound
+        {
+            Pistol,
+            Revolver,
+            Shotgun
+        }
 
 
         public static GunData def

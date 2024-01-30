@@ -15,13 +15,31 @@ public class EntBuilder : MonoBehaviour
         Enemy
     }
 
+    private void OnValidate()
+    {
+        if(GetComponent<SpriteRenderer>() == null)
+        {
+            if (type == EntType.Gun)
+            {
+                gameObject.AddComponent<SpriteRenderer>();
+                if (Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name) != null)
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name);
+                else
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite("Default");
+            }
+        }
+    }
+
     private void Start()
     {
         if(type == EntType.Gun)
         {
+            if (gameObject.GetComponent<SpriteRenderer>() != null)
+                Destroy(gameObject.GetComponent<SpriteRenderer>());
+
             gameObject.tag = "Weapon";
 
-
+            gameObject.AddComponent<AudioSource>();
             gameObject.AddComponent<BoxCollider2D>().isTrigger = true;
             gameObject.GetComponent<BoxCollider2D>().size = Vector2.one * 0.64f;
 

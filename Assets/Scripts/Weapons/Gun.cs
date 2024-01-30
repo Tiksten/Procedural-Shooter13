@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
 
     private Ammo ammo;
 
+    private AudioSource audioSource;
+
     private bool canFire;
 
     private void OnDisable()
@@ -19,6 +21,8 @@ public class Gun : MonoBehaviour
             gameObject.AddComponent<Price>().price = stats.price;
             stats.price = 0;
         }
+
+        Destroy(gameObject.GetComponent<AudioSource>());
     }
 
     private void OnEnable()
@@ -32,6 +36,11 @@ public class Gun : MonoBehaviour
         ammo = FindObjectOfType<Ammo>();
 
         GetComponentInParent<Hand>().rend = GetComponent<SpriteRenderer>();
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+
+        audioSource.PlayOneShot(Resources.Load<AudioClip>("Sounds/Guns/Equip/" + stats.gunEquipSound.ToString()));
     }
 
     private void Update()
@@ -40,6 +49,8 @@ public class Gun : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0) && stats.isFullAuto)
             {
+                audioSource.PlayOneShot(Resources.Load<AudioClip>("Sounds/Guns/" + stats.gunShotSound.ToString() + "/" + Random.Range(1, 4).ToString()));
+
                 canFire = false;
                 ammo.currAmmo-= stats.consumesAmmo;
                 
@@ -59,6 +70,8 @@ public class Gun : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Mouse0) && !stats.isFullAuto)
             {
+                audioSource.PlayOneShot(Resources.Load<AudioClip>("Sounds/Guns/" + stats.gunShotSound.ToString() + "/" + Random.Range(1, 4).ToString()));
+
                 canFire = false;
                 ammo.currAmmo -= stats.consumesAmmo;
                 

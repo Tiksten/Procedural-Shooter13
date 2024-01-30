@@ -10,6 +10,7 @@ public class Coin : MonoBehaviour
         {
             Progress.playerInfo.coins += 5;
             FindObjectOfType<Coins>().UpdateText();
+            Destroy(Instantiate(Resources.Load<GameObject>("Prefabs/Effects/CollectCoin"), transform.position, Quaternion.identity), 1);
             Destroy(gameObject);
         }
     }
