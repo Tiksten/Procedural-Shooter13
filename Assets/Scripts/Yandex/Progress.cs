@@ -32,6 +32,11 @@ public class Progress : MonoBehaviour
         LoadExtern();
 #endif  
         FindObjectOfType<Coins>().UpdateText();
+
+        if(FindObjectOfType<StatsTab>()!=null)
+            FindObjectOfType<StatsTab>().UpdateVisuals();
+
+        FindObjectOfType<Coins>().UpdateText();
     }
 
 
@@ -43,7 +48,6 @@ public class Progress : MonoBehaviour
         {
             playerInfo = new PlayerInfo();
         }
-        playerInfo.coins += 10000;
     }
 
     public static void Save()

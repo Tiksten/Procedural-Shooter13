@@ -11,8 +11,16 @@ public class StatsTab : MonoBehaviour
     [SerializeField]
     private Text totalDmg;
 
-    private void Start()
+    private void OnEnable()
     {
+        UpdateVisuals();
+    }
+
+    public void UpdateVisuals()
+    {
+        if (Progress.playerInfo == null)
+            return;
+
         totalDmg.text = "Total Damage: " + Progress.playerInfo.totalDmg.ToString();
         deaths.text = "Total Deaths: " + Progress.playerInfo.deaths.ToString();
     }

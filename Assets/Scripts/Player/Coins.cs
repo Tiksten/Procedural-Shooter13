@@ -16,6 +16,9 @@ public class Coins : MonoBehaviour
 
     public void UpdateText()
     {
+        if (Progress.playerInfo == null)
+            return;
+
         text.text = Progress.playerInfo.coins.ToString();
     }
 }
