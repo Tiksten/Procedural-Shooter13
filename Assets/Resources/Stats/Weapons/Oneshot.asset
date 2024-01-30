@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Oneshot
   m_EditorClassIdentifier: 
   gunData:
-    dmg: 5
-    cycletime: 0.1
+    dmg: 21
+    cycletime: 2.2
     isFullAuto: 0
     pellets: 5
-    inaccuracy: 0.2
+    inaccuracy: 0.6
     price: 0
     consumesAmmo: 2
     shakeAmplitude: 0.2
     bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
     bulletSpeed: 15
-    bulletSize: 0.1
+    bulletSize: 0.02
+    gunShotSound: 3
+    gunEquipSound: 1
