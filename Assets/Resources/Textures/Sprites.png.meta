@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -776,6 +794,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: NOVA
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 36
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c625a2b3f53a0419e6730f96f4ca86
+      internalID: -113937119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 23
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5272b82745c64834ab5643c365eded71
+      internalID: 237593817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PKM
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 11
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9079957408efdf5428f4adfb1382ec9c
+      internalID: -960774938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -787,42 +868,43 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy: -1312229026
-      Gun4: -1085181408
-      MAC10: 519118194
-      Deagle: 1363922414
-      Gun8: 465304947
+      AK47: 237593817
       Beretta: 1606858137
-      Gun10: 603538736
-      MP5: -107076100
-      Gun11: 797793281
-      Sprites_0: -613382119
-      Oneshot: -1049393737
       Bullet: -733810120
-      Glock: 1822089285
       CZ: -1211173553
-      Nailgun: 2141302827
-      USP: 538539519
-      MP7: 926152317
-      Player: 469840977
-      DungeonExit: 434574176
       Coin: -962562288
-      Gun: 1880967981
-      Gun9: 279614748
-      Gun6: 410385814
-      Honeybadger: 1586789339
-      Gun5: -1114553326
-      Tec9: 714223352
+      Deagle: 1363922414
       Default: 264444957
-      Magnum: -1327777722
-      Gun3: -418407799
-      MP9: -1582391909
-      P90: 1361725092
-      Gun7: -1896873566
+      DungeonExit: 434574176
+      Enemy: -1312229026
+      Glock: 1822089285
+      Gun: 1880967981
+      Gun10: 603538736
+      Gun11: 797793281
       Gun2: 870398606
-  spritePackingTag: 
+      Gun3: -418407799
+      Gun4: -1085181408
+      Gun5: -1114553326
+      Gun6: 410385814
+      Gun7: -1896873566
+      Gun8: 465304947
+      Gun9: 279614748
+      Honeybadger: 1586789339
+      MAC10: 519118194
+      MP5: -107076100
+      MP7: 926152317
+      MP9: -1582391909
+      Magnum: -1327777722
+      NOVA: -613382119
+      Nailgun: 2141302827
+      Oneshot: -1049393737
+      P90: 1361725092
+      PKM: -960774938
+      Player: 469840977
+      Tec9: 714223352
+      USP: 538539519
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

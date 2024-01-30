@@ -55,6 +55,7 @@ SpriteAtlas:
     - 9eaeef025a6c32f489832ab19ed7f470: 538539519
     - 9eaeef025a6c32f489832ab19ed7f470: 1822089285
     - 9eaeef025a6c32f489832ab19ed7f470: 434574176
+    - 9eaeef025a6c32f489832ab19ed7f470: -960774938
     - 9eaeef025a6c32f489832ab19ed7f470: 1606858137
     - 9eaeef025a6c32f489832ab19ed7f470: 1880967981
     - 9eaeef025a6c32f489832ab19ed7f470: 519118194
@@ -78,8 +79,10 @@ SpriteAtlas:
     - 9eaeef025a6c32f489832ab19ed7f470: 264444957
     - 9eaeef025a6c32f489832ab19ed7f470: 469840977
     - 9eaeef025a6c32f489832ab19ed7f470: -1312229026
+    - 9eaeef025a6c32f489832ab19ed7f470: -113937119
     - 9eaeef025a6c32f489832ab19ed7f470: -962562288
     - 9eaeef025a6c32f489832ab19ed7f470: -1211173553
+    - 9eaeef025a6c32f489832ab19ed7f470: 237593817
     - 9eaeef025a6c32f489832ab19ed7f470: -1582391909
     - 9eaeef025a6c32f489832ab19ed7f470: 1361725092
   m_MasterAtlas: {fileID: 0}
@@ -89,6 +92,7 @@ SpriteAtlas:
   - {fileID: 538539519, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1822089285, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 434574176, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: -960774938, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1606858137, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1880967981, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 519118194, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
@@ -112,8 +116,10 @@ SpriteAtlas:
   - {fileID: 264444957, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 469840977, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1312229026, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: -113937119, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -962562288, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1211173553, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 237593817, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1582391909, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1361725092, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -122,6 +128,7 @@ SpriteAtlas:
   - USP
   - Glock
   - DungeonExit
+  - PKM
   - Beretta
   - Gun
   - MAC10
@@ -145,8 +152,10 @@ SpriteAtlas:
   - Default
   - Player
   - Enemy
+  - NOVA
   - Coin
   - CZ
+  - AK47
   - MP9
   - P90
   m_RenderDataMap: {}

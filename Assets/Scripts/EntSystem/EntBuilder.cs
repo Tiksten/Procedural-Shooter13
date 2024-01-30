@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EntBuilder : MonoBehaviour
 {
     [SerializeField]
@@ -15,20 +16,26 @@ public class EntBuilder : MonoBehaviour
         Enemy
     }
 
-    private void OnValidate()
-    {
-        if(GetComponent<SpriteRenderer>() == null)
-        {
-            if (type == EntType.Gun)
-            {
-                gameObject.AddComponent<SpriteRenderer>();
-                if (Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name) != null)
-                    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name);
-                else
-                    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite("Default");
-            }
-        }
-    }
+    //private void OnValidate()
+    //{
+    //    SpriteRenderer sr;
+
+    //    if(GetComponent<SpriteRenderer>()==null)
+    //        sr = gameObject.AddComponent<SpriteRenderer>();
+    //    else
+    //        sr = GetComponent<SpriteRenderer>();
+
+
+    //    if (type == EntType.Gun)
+    //    {
+    //        if (Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name) != null)
+    //            sr.sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name);
+    //        else
+    //            sr.sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite("Default");
+    //    }
+
+    //    Debug.Log("OnValidateCalled!");
+    //}
 
     private void Start()
     {
@@ -52,11 +59,11 @@ public class EntBuilder : MonoBehaviour
 
 
             //gameObject.AddComponent<SpriteRenderer>();
-            //if (Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name) != null)
-            //    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name);
-            //else
-            //    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite("Default");
-            //gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Loot";
+            if (Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name) != null)
+                gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite(name);
+            else
+                gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.U2D.SpriteAtlas>("Textures/Guns").GetSprite("Default");
+            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Loot";
         }
         if (type == EntType.Enemy)
         {
