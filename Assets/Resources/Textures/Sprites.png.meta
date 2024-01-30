@@ -857,6 +857,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Fat
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0a8e77e3089c04a91d774e496cb8e6
+      internalID: 158891071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -877,6 +898,7 @@ TextureImporter:
       Default: 264444957
       DungeonExit: 434574176
       Enemy: -1312229026
+      Fat: 158891071
       Glock: 1822089285
       Gun: 1880967981
       Gun10: 603538736

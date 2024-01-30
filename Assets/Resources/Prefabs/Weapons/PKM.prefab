@@ -47,13 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4710ee01a8699974ea7ff7383d5a1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 5
+  dmg: 60
   cycletime: 0.12
   isFullAuto: 1
   pellets: 1
   inaccuracy: 0.2
-  price: 0
-  consumesAmmo: 1
+  price: 1000
+  consumesAmmo: 2
   shakeAmplitude: 0.6
   bullet: {fileID: 1982060758346116332, guid: 2b6e2027f1b4a1f43bd3aae1d81d2a60, type: 3}
   bulletSpeed: 20

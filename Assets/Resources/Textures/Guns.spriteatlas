@@ -78,6 +78,7 @@ SpriteAtlas:
     - 9eaeef025a6c32f489832ab19ed7f470: 797793281
     - 9eaeef025a6c32f489832ab19ed7f470: 264444957
     - 9eaeef025a6c32f489832ab19ed7f470: 469840977
+    - 9eaeef025a6c32f489832ab19ed7f470: 158891071
     - 9eaeef025a6c32f489832ab19ed7f470: -1312229026
     - 9eaeef025a6c32f489832ab19ed7f470: -113937119
     - 9eaeef025a6c32f489832ab19ed7f470: -962562288
@@ -115,6 +116,7 @@ SpriteAtlas:
   - {fileID: 797793281, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 264444957, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 469840977, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 158891071, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1312229026, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -113937119, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -962562288, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
@@ -151,6 +153,7 @@ SpriteAtlas:
   - Gun11
   - Default
   - Player
+  - Fat
   - Enemy
   - NOVA
   - Coin

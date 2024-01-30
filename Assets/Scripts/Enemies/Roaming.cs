@@ -38,6 +38,9 @@ public class Roaming : MonoBehaviour
 
     private void Tick()
     {
+        if (target == null)
+            return;
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, target.position - transform.position, viewDist, layerMask);
 
         if (hit.transform != null)
