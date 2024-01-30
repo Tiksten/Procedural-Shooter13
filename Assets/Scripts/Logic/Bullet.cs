@@ -29,8 +29,14 @@ public class Bullet : MonoBehaviour
         {
             collision.collider.GetComponent<Health>().RecieveDmg(dmg);
             effect = hitBody;
+            Progress.playerInfo.totalDmg += dmg;
         }
-        
+
+        if (collision.collider.GetComponent<Roaming>() != null)
+        {
+            collision.collider.GetComponent<Roaming>().ForceEyeContact();
+        }
+
         Destroy(Instantiate(effect, transform.position, Quaternion.FromToRotation(Vector3.up, (Vector3)collision.contacts[0].normal)), 2);
         
         Destroy(gameObject);

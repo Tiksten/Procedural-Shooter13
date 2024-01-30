@@ -9,18 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 30647755cce21144084349c95be9f4d1, type: 3}
   m_Name: Glock
-  m_EditorClassIdentifier: Assembly-CSharp::GunStats
+  m_EditorClassIdentifier: 
   gunData:
-    dmg: 8
+    dmg: 5
     cycletime: 0.1
     isFullAuto: 0
     pellets: 1
     inaccuracy: 0.2
-    price: 1000
-    consumesAmmo: 4
-    shakeAmplitude: 0.08
+    price: 7
+    consumesAmmo: 2
+    shakeAmplitude: 0.2
     bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}
     bulletSpeed: 15
     bulletSize: 0.1

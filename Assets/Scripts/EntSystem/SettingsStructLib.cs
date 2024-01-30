@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 
@@ -78,12 +77,4 @@ public class SettingsStructLib
             
         
     }
-}
-
-[Serializable]
-[CreateAssetMenu(fileName = "Gun", menuName = "Stats")]
-public class GunStats : ScriptableObject
-{
-    [SerializeField]
-    public SettingsStructLib.GunData gunData;
 }

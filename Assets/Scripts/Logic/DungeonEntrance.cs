@@ -13,6 +13,8 @@ public class DungeonEntrance : MonoBehaviour
         if (collision.tag != "Player")
             return;
 
+        Progress.Save();
+
         SceneManager.LoadScene(sceneIndex);
 
         collision.transform.position = Vector3.zero;

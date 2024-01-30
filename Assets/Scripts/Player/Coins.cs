@@ -16,6 +16,6 @@ public class Coins : MonoBehaviour
 
     public void UpdateText()
     {
-        text.text = PlayerPrefs.GetInt("Coins", 0).ToString();
+        text.text = Progress.playerInfo.coins.ToString();
     }
 }

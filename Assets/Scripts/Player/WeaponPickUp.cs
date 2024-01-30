@@ -21,7 +21,7 @@ public class WeaponPickUp : MonoBehaviour
         {
             if(currSelected.GetComponent<Price>()!=null)
             {
-                if (currSelected.GetComponent<Price>().price > PlayerPrefs.GetInt("Coins", 0))
+                if (currSelected.GetComponent<Price>().price > Progress.playerInfo.coins)
                     return;
             }
 
@@ -33,7 +33,7 @@ public class WeaponPickUp : MonoBehaviour
     {
         if (currSelected.GetComponent<Price>() != null)
         {
-            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) - currSelected.GetComponent<Price>().price);
+            Progress.playerInfo.coins -= currSelected.GetComponent<Price>().price;
             Destroy(currSelected.GetComponent<Price>());
             FindObjectOfType<Coins>().UpdateText();
         }

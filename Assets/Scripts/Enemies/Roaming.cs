@@ -50,6 +50,12 @@ public class Roaming : MonoBehaviour
         Invoke("Tick", Random.Range(tickTime.x, tickTime.y));
     }
 
+    public void ForceEyeContact()
+    {
+        enableOnEyeContact.enabled = true;
+        Destroy(this);
+    }
+
     private void FixedUpdate()
     {
         if((currTarget - transform.position).magnitude > 0.1f)

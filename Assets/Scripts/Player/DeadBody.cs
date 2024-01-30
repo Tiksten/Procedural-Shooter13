@@ -11,9 +11,12 @@ public class DeadBody : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.SetInt("Coins", Mathf.FloorToInt(PlayerPrefs.GetInt("Coins", 0)*0.8f));
+        Progress.playerInfo.coins = (int)(Progress.playerInfo.coins * 0.8f);
+        Progress.playerInfo.deaths += 1;
         Invoke("Restart", 3);
         Destroy(FindObjectOfType<Player>().gameObject);
+
+        Progress.Save();
     }
 
     private void Restart()

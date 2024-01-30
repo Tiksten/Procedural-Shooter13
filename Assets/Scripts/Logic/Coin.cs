@@ -8,7 +8,7 @@ public class Coin : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) + 5);
+            Progress.playerInfo.coins += 5;
             FindObjectOfType<Coins>().UpdateText();
             Destroy(gameObject);
         }
