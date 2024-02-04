@@ -24,6 +24,8 @@ public class Progress : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void LoadExtern();
 
+    public static int raidCoins;
+
     private void Start()
     {
         playerInfo = new PlayerInfo();
@@ -52,6 +54,11 @@ public class Progress : MonoBehaviour
 
     public static void Save()
     {
+        playerInfo.coins += raidCoins;
+        raidCoins = 0;
+
+        Coins.instance.UpdateText();
+
 #if !UNITY_EDITOR
         string jsonString = JsonUtility.ToJson(playerInfo);
         SaveExtern(jsonString);

@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class AmmoBox : MonoBehaviour
 {
     [SerializeField]
-    private int value = 5;
+    private int addAmmo = 20;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
-            Progress.raidCoins += value;
-            FindObjectOfType<Coins>().UpdateText();
+            collision.gameObject.GetComponent<Ammo>().currAmmo += addAmmo;
+
             Destroy(Instantiate(Resources.Load<GameObject>("Prefabs/Effects/CollectCoin"), transform.position, Quaternion.identity), 1);
             Destroy(gameObject);
         }

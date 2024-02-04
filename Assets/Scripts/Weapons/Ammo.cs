@@ -24,10 +24,13 @@ public class Ammo : MonoBehaviour
 
     private void Cycle()
     {
-        slider.value = currAmmo;
+        if(currAmmo > maxAmmo)
+            currAmmo = maxAmmo;
 
-        if (currAmmo < maxAmmo)
+        else if (currAmmo < maxAmmo)
             currAmmo += 1;
+
+        slider.value = currAmmo;
 
         Invoke("Cycle", oneAmmoTime);
     }

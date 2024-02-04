@@ -42,7 +42,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2827457270557000120}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4710ee01a8699974ea7ff7383d5a1995, type: 3}
   m_Name: 
@@ -52,7 +52,6 @@ MonoBehaviour:
   isFullAuto: 1
   pellets: 1
   inaccuracy: 0.15
-  price: 350
   consumesAmmo: 4
   shakeAmplitude: 0.3
   bullet: {fileID: 1982060758346116332, guid: ffebd7475869ec44a8a20cb319dd7de5, type: 3}

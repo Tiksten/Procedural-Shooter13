@@ -6,13 +6,11 @@ public class Hand : MonoBehaviour
 {
     private Camera cam;
 
-    [HideInInspector]
-    public SpriteRenderer rend;
+    private bool prevFlipped;
 
     private void Start()
     {
         cam = FindObjectOfType<Camera>();    
-        rend = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -23,7 +21,13 @@ public class Hand : MonoBehaviour
 
         transform.rotation = Quaternion.FromToRotation(Vector3.up, dir);
 
-        if(rend != null)
-            rend.flipY = dir.x < 0;
+        
+        if(dir.x < 0 != prevFlipped)
+        {
+            foreach (Transform child in transform.GetChild(0))
+                child.GetComponent<SpriteRenderer>().flipY = !prevFlipped;
+
+            prevFlipped = !prevFlipped;
+        }
     }
 }

@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class Coins : MonoBehaviour
 {
+    public static Coins instance;
+
     [SerializeField]
     private Text text;
 
     private void Start()
     {
+        instance = this;
         UpdateText();
     }
 
@@ -19,6 +22,9 @@ public class Coins : MonoBehaviour
         if (Progress.playerInfo == null)
             return;
 
-        text.text = Progress.playerInfo.coins.ToString();
+        if(Progress.raidCoins>0)
+            text.text = Progress.raidCoins.ToString();
+        else
+            text.text = Progress.playerInfo.coins.ToString();
     }
 }

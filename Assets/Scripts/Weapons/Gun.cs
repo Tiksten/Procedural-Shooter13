@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun : MonoBehaviour, IPickable
 {
     public float dmg = 5;
 
@@ -16,8 +16,6 @@ public class Gun : MonoBehaviour
     public float inaccuracy = 0.1f;
 
     [Space(10)]
-
-    public int price = 0;
 
     public int consumesAmmo = 1;
 
@@ -61,41 +59,39 @@ public class Gun : MonoBehaviour
 
     private bool canFire;
 
-
-    private void Awake()
+    private void Start()
     {
-        if (price > 0 && transform.parent.GetComponent<WeaponSwitch>() == null)
-        {
-            gameObject.AddComponent<Price>().price = price;
-            price = 0;
-        }
+        audioSource = GetComponent<AudioSource>();
+        ammo = FindObjectOfType<Ammo>();
+
+        if (transform.parent.GetComponent<WeaponSwitch>() != null)
+            OnPickUp();
+        else
+            OnDrop();
     }
 
-    private void OnDisable()
+    public void OnDrop()
     {
-        if (GetComponent<Price>() == null && price > 0 && transform.parent.GetComponent<WeaponSwitch>() == null)
-        {
-            gameObject.AddComponent<Price>().price = price;
-            price = 0;
-        }
-
-        Destroy(gameObject.GetComponent<AudioSource>());
+        enabled = false;
     }
 
     private void OnEnable()
     {
+        canFire = true;
+    }
+
+    public void OnPickUp()
+    {
+        enabled = true;
+
         if (transform.parent.GetComponent<WeaponSwitch>() == null)
         {
             return;
         }
 
         canFire = true;
-        ammo = FindObjectOfType<Ammo>();
 
-        GetComponentInParent<Hand>().rend = GetComponent<SpriteRenderer>();
-
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.playOnAwake = false;
+        
 
         audioSource.PlayOneShot(Resources.Load<AudioClip>("Sounds/Guns/Equip/" + gunEquipSound.ToString()));
     }

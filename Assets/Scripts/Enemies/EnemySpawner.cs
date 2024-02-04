@@ -44,6 +44,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void TrySpawnEnemy()
     {
+        if(player == null) 
+            return;
+
         var pos = player.position + (Vector3)Random.insideUnitCircle.normalized * Random.Range(spawnDist.x, spawnDist.y);
 
         if (!Physics2D.OverlapCircle(pos, 0.2f))

@@ -5,6 +5,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
+
+public interface IPickable
+{
+    public void OnPickUp();
+    public void OnDrop();
+}
+
 public class WeaponPickUp : MonoBehaviour
 {
     [SerializeField]
@@ -13,31 +21,18 @@ public class WeaponPickUp : MonoBehaviour
     [SerializeField]
     private Transform hand;
 
-    private Transform currSelected;
+    private GameObject currSelected;
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && currSelected != null)
         {
-            if(currSelected.GetComponent<Price>()!=null)
-            {
-                if (currSelected.GetComponent<Price>().price > Progress.playerInfo.coins)
-                    return;
-            }
-
             SwitchGuns();
         }
     }
 
     private void SwitchGuns()
     {
-        if (currSelected.GetComponent<Price>() != null)
-        {
-            Progress.playerInfo.coins -= currSelected.GetComponent<Price>().price;
-            Destroy(currSelected.GetComponent<Price>());
-            FindObjectOfType<Coins>().UpdateText();
-        }
-
         Transform gunToDrop = null;
 
         foreach(Transform gun in hand.transform)
@@ -49,28 +44,42 @@ public class WeaponPickUp : MonoBehaviour
             }
         }
 
-        foreach (MonoBehaviour comp in gunToDrop.GetComponents<MonoBehaviour>())
-        {
-            if(!(comp is SpriteRenderer || comp is BoxCollider2D))
-                comp.enabled = false;
-        }
-
-        gunToDrop.parent = null;
-        gunToDrop.position = currSelected.position;
-        gunToDrop.rotation = currSelected.rotation;
-        gunToDrop.localScale = Vector3.one;
-        gunToDrop.AddComponent<BoxCollider2D>().isTrigger = true;
+        gunToDrop.SetParent(null);
+        gunToDrop.SetPositionAndRotation(currSelected.transform.position, currSelected.transform.rotation);
+        gunToDrop.GetComponent<BoxCollider2D>().enabled = true;
         gunToDrop.GetComponent<SpriteRenderer>().sortingLayerName = "Loot";
 
-        currSelected.transform.parent = hand.transform;
+        var comps1 = gunToDrop.GetComponents<IPickable>();
 
-        foreach (MonoBehaviour comp in currSelected.GetComponents<MonoBehaviour>())
-            comp.enabled = true;
+        if(comps1!=null)
+        {
+            foreach(var comp in comps1)
+            {
+                comp.OnDrop();
+            }
+        }
 
-        currSelected.transform.localPosition = Vector3.zero;
-        currSelected.transform.localRotation = Quaternion.identity;
+
+
+
+
+        currSelected.transform.SetParent(hand.transform);
+        currSelected.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
         currSelected.GetComponent<SpriteRenderer>().sortingLayerName = "Defalut";
-        Destroy(currSelected.GetComponent<BoxCollider2D>());
+
+        
+        var comps2 = currSelected.GetComponents<IPickable>();
+
+        if (comps2 != null)
+        {
+            foreach (var comp in comps2)
+            {
+                comp.OnPickUp();
+            }
+        }
+
+        currSelected.GetComponent<BoxCollider2D>().enabled = false;
+
 
         SceneManager.MoveGameObjectToScene(gunToDrop.gameObject, SceneManager.GetActiveScene());
 
@@ -81,21 +90,15 @@ public class WeaponPickUp : MonoBehaviour
     {
         if(collision.tag == "Weapon" && currSelected == null)
         {
-            currSelected = collision.transform;
-
-            if (currSelected.GetComponent<Price>() != null)
-                text.text = (currSelected.name + " Price:" + currSelected.GetComponent<Price>().price.ToString());
-            else
-                text.text = currSelected.name;
+            currSelected = collision.gameObject;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Weapon" && currSelected == collision.transform)
+        if (currSelected == collision.transform.gameObject)
         {
             currSelected = null;
-            text.text = "";
         }
     }
 }

@@ -13,6 +13,8 @@ public class DungeonEntrance : MonoBehaviour
         if (collision.tag != "Player")
             return;
 
+        Player.inRaid = !Player.inRaid;
+
         Progress.Save();
 
         SceneManager.LoadScene(sceneIndex);

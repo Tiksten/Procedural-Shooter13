@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 2112669758102769505}
   - component: {fileID: 2152483704508238982}
   - component: {fileID: 2210526900624852452}
+  - component: {fileID: 2148978617326139971}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -409,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15eb8bec582541c4f888799092b5e4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   hp: 100
   deadBody: {fileID: 6470845878374239294, guid: 2c0ae00ea9a7a3b468fea43fff7aa43d, type: 3}
   slider: {fileID: 0}
@@ -467,7 +469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1628b84ec72d9514483f0e19fd8caad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
   oneHpTime: 0.5
 --- !u!82 &2210526900624852452
 AudioSource:
@@ -565,6 +566,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2148978617326139971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010855027577535094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860902b16548339478fa92ccc870dc3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &4248712752848114287
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd660328afe58446b75b65fc08cf3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
 --- !u!114 &2514112772061873516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,6 +937,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6857102135010375605, guid: 53195809c15a4c3408948fa17bf759f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7285883929002686905, guid: 53195809c15a4c3408948fa17bf759f5, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -996,6 +1013,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345107754100865898, guid: 7f5269888d3223b44aaa5d9d7317153f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857102135010375605, guid: 7f5269888d3223b44aaa5d9d7317153f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7285883929002686905, guid: 7f5269888d3223b44aaa5d9d7317153f, type: 3}

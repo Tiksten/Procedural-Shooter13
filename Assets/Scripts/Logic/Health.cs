@@ -3,7 +3,10 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float hp = 100;
+    [SerializeField]
+    private float maxHealth = 100;
+
+    public float hp;
 
     [SerializeField]
     private GameObject deadBody;
@@ -13,6 +16,8 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
+        hp = maxHealth;
+
         if (slider != null)
             slider.value = hp;
     }
@@ -20,6 +25,9 @@ public class Health : MonoBehaviour
     public void RecieveDmg(float dmg)
     {
         hp -= dmg;
+
+        if (hp > maxHealth)
+            hp = maxHealth;
 
         if (slider != null)
             slider.value = hp;

@@ -11,14 +11,12 @@ public class DeadBody : MonoBehaviour
 
     private void Start()
     {
-        Progress.playerInfo.coins = (int)(Progress.playerInfo.coins * 0.8f);
+        Progress.raidCoins = (int)(Progress.raidCoins * 0.4f);
         Progress.playerInfo.deaths += 1;
         Invoke("Restart", 10);
         Destroy(FindObjectOfType<Player>().gameObject);
 
-    #if !UNITY_EDITOR
         Progress.Save();
-    #endif
     }
 
     private void Restart()

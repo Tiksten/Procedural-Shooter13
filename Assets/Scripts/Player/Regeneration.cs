@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Regeneration : MonoBehaviour
 {
-    [SerializeField]
-    private int maxHp = 100;
-
     private Health health;
 
     [SerializeField]
@@ -20,8 +17,7 @@ public class Regeneration : MonoBehaviour
 
     private void Cycle()
     {
-        if (health.hp < maxHp)
-            health.RecieveDmg(-1);
+        health.RecieveDmg(-1);
 
         Invoke("Cycle", oneHpTime);
     }
