@@ -97,6 +97,7 @@ SpriteAtlas:
     - 9eaeef025a6c32f489832ab19ed7f470: -1231200050
     - 9eaeef025a6c32f489832ab19ed7f470: 284501366
     - 9eaeef025a6c32f489832ab19ed7f470: -113937119
+    - 9eaeef025a6c32f489832ab19ed7f470: 1185708734
     - 9eaeef025a6c32f489832ab19ed7f470: -962562288
     - 9eaeef025a6c32f489832ab19ed7f470: 1434268050
     - 9eaeef025a6c32f489832ab19ed7f470: -1211173553
@@ -152,6 +153,7 @@ SpriteAtlas:
   - {fileID: -1231200050, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 284501366, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -113937119, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 1185708734, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -962562288, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1434268050, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1211173553, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
@@ -206,6 +208,7 @@ SpriteAtlas:
   - Knife
   - PressurePlate
   - NOVA
+  - AdvSign
   - Coin
   - Beartrap
   - CZ

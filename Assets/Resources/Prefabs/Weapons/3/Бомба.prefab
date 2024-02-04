@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101660984755783360}
-  - component: {fileID: 5494396100788562732}
+  - component: {fileID: 7921698990356926875}
   - component: {fileID: 7641231403518542974}
   - component: {fileID: 3559284990515401116}
   - component: {fileID: 8714143636498549664}
@@ -36,7 +36,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5494396100788562732
+--- !u!114 &7921698990356926875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,16 +45,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 8743394972666649539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bccda1638ee21947a50d91b8b0e16c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4710ee01a8699974ea7ff7383d5a1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dist: 0.5
-  radius: 0.5
-  dmg: 20
-  cycletime: 0.5
-  knockback: 15
-  blood: {fileID: 3865427627804100001, guid: e3aec49f47b25944db37fb5ce5a859c9, type: 3}
-  swingAngle: 180
+  dmg: 5
+  cycletime: 0.1
+  isFullAuto: 0
+  pellets: 1
+  inaccuracy: 0.1
+  consumesAmmo: 15
+  shakeAmplitude: 0.05
+  bullet: {fileID: 2930242397289515793, guid: e8b88444071eace46a71d50ba8102c62, type: 3}
+  bulletSpeed: 15
+  bulletSize: 0.1
+  bulletDist: 0.5
+  gunShotSound: 0
+  gunEquipSound: 0
+  bulletLiveTime: 10
 --- !u!212 &7641231403518542974
 SpriteRenderer:
   m_ObjectHideFlags: 0

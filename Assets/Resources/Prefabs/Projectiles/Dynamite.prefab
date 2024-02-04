@@ -50,9 +50,9 @@ MonoBehaviour:
   startSpeed: 15
   startTorque: 3
   timer: 2
-  dmg: {x: 15, y: 60}
-  impulse: 15
-  dist: 3
+  dmg: {x: 15, y: 200}
+  impulse: 25
+  dist: 4
   blood: {fileID: 3865427627804100001, guid: e3aec49f47b25944db37fb5ce5a859c9, type: 3}
   explosion: {fileID: 3865427627804100001, guid: 967d0716963653e4f83982dadae1a0e6, type: 3}
   camShake: 0.5
