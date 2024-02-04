@@ -57,6 +57,16 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    public void TrySpawnEnemy(Transform pos)
+    {
+        if (!Physics2D.OverlapCircle(pos.position, 0.2f))
+        {
+            totalEnemies++;
+            var enemy = Instantiate(enemies[Random.Range(0, enemies.Count)], pos.position, Quaternion.identity, transform);
+            enemy.AddComponent<EnemyAnchor>().enemySpawner = this;
+        }
+    }
+
     public void OnEnemyDeath(EnemyAnchor enemyAnchor)
     {
         totalEnemies--;

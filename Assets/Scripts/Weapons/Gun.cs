@@ -5,35 +5,51 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour, IPickable
 {
-    public float dmg = 5;
+    [SerializeField]
+    private float dmg = 5;
 
-    public float cycletime = 0.1f;
+    [SerializeField]
+    private float cycletime = 0.1f;
 
-    public bool isFullAuto = false;
+    [SerializeField]
+    private bool isFullAuto = false;
 
-    public int pellets = 1;
+    [SerializeField] 
+    private int pellets = 1;
 
-    public float inaccuracy = 0.1f;
+    [SerializeField] 
+    private float inaccuracy = 0.1f;
 
     [Space(10)]
 
-    public int consumesAmmo = 1;
+    [SerializeField]
+    private int consumesAmmo = 1;
 
-    public float shakeAmplitude = 0.1f;
+    [SerializeField]
+    private float shakeAmplitude = 0.1f;
 
     [Space(10)]
 
-    public GameObject bullet;
+    [SerializeField]
+    private GameObject bullet;
 
-    public float bulletSpeed = 15;
+    [SerializeField]
+    private float bulletSpeed = 15;
 
-    public float bulletSize = 0.1f;
+    [SerializeField]
+    private float bulletSize = 0.1f;
 
-    public float bulletDist = 0.5f;
+    [SerializeField]
+    private float bulletDist = 0.5f;
 
-    public GunShotSound gunShotSound;
+    [SerializeField]
+    private GunShotSound gunShotSound;
 
-    public GunEquipSound gunEquipSound;
+    [SerializeField]
+    private GunEquipSound gunEquipSound;
+
+    [SerializeField]
+    private float bulletLiveTime = 2;
 
 
     public enum GunShotSound
@@ -124,13 +140,18 @@ public class Gun : MonoBehaviour, IPickable
 
             CameraShaker.Instance.Recoil(newBulletRotation * Vector3.up, shakeAmplitude);
 
-            var b = Instantiate(bullet, transform.position + transform.right * bulletDist, newBulletRotation).GetComponent<Bullet>();
+            var go = Instantiate(bullet, transform.position + transform.right * bulletDist, newBulletRotation);
 
-            b.transform.localScale = b.transform.localScale * bulletSize;
-            b.dmg = dmg;
-            b.velocity = bulletSpeed;
+            if (go.GetComponent<Bullet>() != null)
+            {
+                var b = go.GetComponent<Bullet>();
 
-            Destroy(b, 2);
+                b.transform.localScale = b.transform.localScale * bulletSize;
+                b.dmg = dmg;
+                b.velocity = bulletSpeed;
+            }
+
+            Destroy(go, bulletLiveTime);
         }
         Invoke("Reset", cycletime);
     }

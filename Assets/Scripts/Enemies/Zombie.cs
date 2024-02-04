@@ -64,7 +64,18 @@ public class Zombie : MonoBehaviour
         {
             for (var i = Random.Range(coinCount.x, coinCount.y); i > 0; i--)
             {
-                Instantiate(coin, transform.position + (Vector3)Random.insideUnitCircle * 2, transform.rotation);
+                var dir = Random.insideUnitCircle;
+
+                var hit = Physics2D.Raycast(transform.position, dir, 2);
+
+                if (hit.point!=null)
+                {
+                    Instantiate(coin, hit.point, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(coin, (Vector2)transform.position + dir * 2, Quaternion.identity);
+                }
             }
         }
     }

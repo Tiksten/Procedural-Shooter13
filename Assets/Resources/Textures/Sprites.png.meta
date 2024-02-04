@@ -866,7 +866,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -874,6 +874,174 @@ TextureImporter:
       bones: []
       spriteID: bf0a8e77e3089c04a91d774e496cb8e6
       internalID: 158891071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skinny
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f734ee23edec74ca38b980b9cfe8fb
+      internalID: -534215729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0c3d8e992b7d74b886035b171f083c
+      internalID: -537616911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beartrap
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 81
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16212ecb81f0b62429960a4859c8b3ea
+      internalID: 1434268050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PressurePlate
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba2638cab0ba214e874d35c1ed040c2
+      internalID: 284501366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 83
+        width: 5
+        height: 11
+      alignment: 9
+      pivot: {x: 0.6, y: 0.27272728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e56294d25bb1ba4584a408e4ac10e2b
+      internalID: 200131682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 83
+        width: 3
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adabc12b56280e4081dc6a8466b5076
+      internalID: 1097424855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c0ee9fb5fa2af4dbcaf5d8333cd80b
+      internalID: 1067754610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmoBox
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 5
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01870aecc26742e43b99aa1c74cfc2e3
+      internalID: -940731980
       vertices: []
       indices: 
       edges: []
@@ -890,6 +1058,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       AK47: 237593817
+      AmmoBox: -940731980
+      Beartrap: 1434268050
       Beretta: 1606858137
       Bullet: -733810120
       CZ: -1211173553
@@ -898,6 +1068,7 @@ TextureImporter:
       Default: 264444957
       DungeonExit: 434574176
       Enemy: -1312229026
+      Explosive: 1097424855
       Fat: 158891071
       Glock: 1822089285
       Gun: 1880967981
@@ -911,6 +1082,7 @@ TextureImporter:
       Gun7: -1896873566
       Gun8: 465304947
       Gun9: 279614748
+      Health: 1067754610
       Honeybadger: 1586789339
       MAC10: 519118194
       MP5: -107076100
@@ -923,6 +1095,10 @@ TextureImporter:
       P90: 1361725092
       PKM: -960774938
       Player: 469840977
+      PressurePlate: 284501366
+      Skinny: -534215729
+      Spikes: -537616911
+      Sword: 200131682
       Tec9: 714223352
       USP: 538539519
   mipmapLimitGroupName: 

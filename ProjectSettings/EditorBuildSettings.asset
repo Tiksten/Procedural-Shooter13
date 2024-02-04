@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Hub.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/EmptyHub.unity
+    guid: f923b38843c737d4290cf03d33092ff1
+  - enabled: 1
     path: Assets/Scenes/Dungeons/ProcDungeon.unity
     guid: 3dd88ee8b96b4194591f9b5502c84b5f
-  - enabled: 1
-    path: Assets/Scenes/EmptyHub.unity
-    guid: 04391f8264055ad44b16b2a1091c568d
   - enabled: 1
     path: Assets/Scenes/Dungeons/Catacombs.unity
     guid: d609817983b853b4293288ff54d86715

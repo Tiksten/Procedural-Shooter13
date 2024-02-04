@@ -6,7 +6,7 @@ public class Hand : MonoBehaviour
 {
     private Camera cam;
 
-    private bool prevFlipped;
+    public static bool prevFlipped;
 
     private void Start()
     {
