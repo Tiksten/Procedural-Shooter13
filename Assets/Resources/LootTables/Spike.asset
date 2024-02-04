@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66358b73f3ae1c4da9d504e620411ba, type: 3}
+  m_Name: Spike
+  m_EditorClassIdentifier: 
+  lootTable:
+  - item: {fileID: 3399834976951890487, guid: cdefd51ab20fc2d4f9f77628fb60453e, type: 3}
+    spawnChance: 1

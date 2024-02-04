@@ -30,19 +30,10 @@ public class Progress : MonoBehaviour
     {
         playerInfo = new PlayerInfo();
         DontDestroyOnLoad(this);
-#if !UNITY_EDITOR
-        LoadExtern();
-#endif  
-        FindObjectOfType<Coins>().UpdateText();
-
-        if(FindObjectOfType<StatsTab>()!=null)
-            FindObjectOfType<StatsTab>().UpdateVisuals();
-
-        FindObjectOfType<Coins>().UpdateText();
     }
 
 
-    //external call with LoadExtern (only once: at load)
+    //external call with LoadExtern (only once: at load; in: YebaniyKostyl)
     public void SetPlayerInfo(string value)
     {
         playerInfo = JsonUtility.FromJson<PlayerInfo>(value);
@@ -63,5 +54,25 @@ public class Progress : MonoBehaviour
         string jsonString = JsonUtility.ToJson(playerInfo);
         SaveExtern(jsonString);
 #endif
+    }
+
+    public void YebaniyKostyl()
+    {
+        LoadExtern();
+
+        FindObjectOfType<Coins>().UpdateText();
+
+        if (FindObjectOfType<StatsTab>() != null)
+            FindObjectOfType<StatsTab>().UpdateVisuals();
+
+        Invoke("KostylEnding", 1);
+    }
+
+    private void KostylEnding()
+    {
+        FindObjectOfType<Coins>().UpdateText();
+
+        if (FindObjectOfType<StatsTab>() != null)
+            FindObjectOfType<StatsTab>().UpdateVisuals();
     }
 }

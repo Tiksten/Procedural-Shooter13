@@ -10055,6 +10055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 788905182}
   - component: {fileID: 788905183}
+  - component: {fileID: 788905184}
   m_Layer: 0
   m_Name: Progress
   m_TagString: Untagged
@@ -10089,6 +10090,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f3ecd6843b22d4eb209c5d41a983a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &788905184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788905181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3cee755fdac83478cd3ea62c4b39f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: {fileID: 788905183}
 --- !u!1001 &856900284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10765,7 +10779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Total Damage: 14287'
+  m_Text: 'Total Damage: loading'
 --- !u!222 &1124780203
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13324,15 +13338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b402d4786264114a84644baff8fadbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootTable:
-  - item: {fileID: 7574793276523613029, guid: 2f9853f6bf7e43c42aed7c37ac973005, type: 3}
-    spawnChance: 50
-  - item: {fileID: 7574793276523613029, guid: 72d2f81f3e1dda04c93a9a039411c436, type: 3}
-    spawnChance: 30
-  - item: {fileID: 7574793276523613029, guid: 75c9348d57c322741a88005524899c88, type: 3}
-    spawnChance: 15
-  - item: {fileID: 7574793276523613029, guid: 73f2ce8eb23b2dc41b3ef3e352639914, type: 3}
-    spawnChance: 5
+  lootTable: {fileID: 11400000, guid: 5b7ce0db51e20f440a0c2a9974164044, type: 2}
   points:
   - {fileID: 774033488}
   - {fileID: 525344874}
@@ -13508,7 +13514,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Total Deaths: 285'
+  m_Text: 'Total Deaths: loading'
 --- !u!222 &1838689998
 CanvasRenderer:
   m_ObjectHideFlags: 0

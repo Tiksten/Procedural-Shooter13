@@ -91,6 +91,7 @@ public class WeaponPickUp : MonoBehaviour
         if(collision.tag == "Weapon" && currSelected == null)
         {
             currSelected = collision.gameObject;
+            text.text = ("Pick up " + currSelected.name);
         }
     }
 
@@ -99,6 +100,7 @@ public class WeaponPickUp : MonoBehaviour
         if (currSelected == collision.transform.gameObject)
         {
             currSelected = null;
+            text.text = "";
         }
     }
 }

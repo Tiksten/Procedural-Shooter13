@@ -52,7 +52,7 @@ MonoBehaviour:
   radius: 0.5
   dmg: 20
   cycletime: 0.5
-  knockback: 5
+  knockback: 15
   blood: {fileID: 3865427627804100001, guid: e3aec49f47b25944db37fb5ce5a859c9, type: 3}
   swingAngle: 180
 --- !u!212 &1982138816396177532

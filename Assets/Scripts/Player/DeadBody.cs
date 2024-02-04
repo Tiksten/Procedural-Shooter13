@@ -22,6 +22,6 @@ public class DeadBody : MonoBehaviour
     private void Restart()
     {
         Instantiate(newPlayer, Vector3.zero, Quaternion.identity);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }

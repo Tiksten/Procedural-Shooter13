@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class LootSpawn : MonoBehaviour
 {
-    [System.Serializable]
-    private struct LootTableLine
-    {
-        public GameObject item;
-        public float spawnChance;
-    }
-
     [SerializeField]
-    private LootTableLine[] lootTable;
+    private LootTable lootTable;
 
     [SerializeField]
     private Transform[] points; 
@@ -30,31 +23,6 @@ public class LootSpawn : MonoBehaviour
 
     private void SpawnAt(Transform point)
     {
-        float weight = 0;
-
-        foreach (var l in lootTable)
-        {
-            weight += l.spawnChance;
-        }
-
-        var choose = Random.value;
-
-        choose *= weight;
-
-        float prev = 0;
-
-        foreach (var l in lootTable)
-        {
-            if (choose <= l.spawnChance + prev)
-            {
-                Instantiate(l.item, point.position, point.rotation, transform);
-                Destroy(this);
-                break;
-            }
-            else
-            {
-                prev += l.spawnChance;
-            }
-        }
+        Instantiate(lootTable.GetItem(), point.position, point.rotation, transform);
     }
 }

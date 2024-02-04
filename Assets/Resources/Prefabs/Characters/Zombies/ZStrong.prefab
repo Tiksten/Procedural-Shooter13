@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2101381654819356226}
   - component: {fileID: -4987879385857126130}
   - component: {fileID: 6970593307452695055}
+  - component: {fileID: 4718270030052555200}
   m_Layer: 6
   m_Name: ZStrong
   m_TagString: Untagged
@@ -165,11 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08078168fe20b1e4082c612ac27c3c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 7574793276523613029, guid: 2f9853f6bf7e43c42aed7c37ac973005, type: 3}
   dmg: 16
   cycletime: 0.3
   acceleration: 0.9
-  coinCount: {x: 3, y: 7}
 --- !u!114 &2101381654819356226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15eb8bec582541c4f888799092b5e4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   hp: 120
   deadBody: {fileID: 6470845878374239294, guid: daee2bc05d3277a4e8b0bf26743d63b4, type: 3}
   slider: {fileID: 0}
@@ -299,6 +299,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4718270030052555200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597564244847766225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca1f4e6ddee5ee418babeb6f60e7e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropCount: {x: 3, y: 5}
+  lootTable: {fileID: 11400000, guid: 9b2c8bff53b18a04984f07423e52feb2, type: 2}
 --- !u!1 &6759097672924692058
 GameObject:
   m_ObjectHideFlags: 0

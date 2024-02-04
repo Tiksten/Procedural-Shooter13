@@ -19,8 +19,11 @@ public class GooglePay : MonoBehaviour
             {
                 if (currSelected.price <= Progress.raidCoins)
                 {
+                    var cl = currSelected.GetComponent<Collider2D>();
                     Progress.raidCoins -= currSelected.price;
                     Destroy(currSelected);
+                    cl.enabled = false;
+                    cl.enabled = true;
                     Coins.instance.UpdateText();
                 }
             }
@@ -28,8 +31,11 @@ public class GooglePay : MonoBehaviour
             {
                 if (currSelected.price <= Progress.playerInfo.coins)
                 {
+                    var cl = currSelected.GetComponent<Collider2D>();
                     Progress.playerInfo.coins -= currSelected.price;
                     Destroy(currSelected);
+                    cl.enabled = false;
+                    cl.enabled = true;
                     Coins.instance.UpdateText();
                 }
             }
@@ -42,7 +48,7 @@ public class GooglePay : MonoBehaviour
         {
             currSelected = collision.GetComponent<Price>();
 
-            text.text = (currSelected.name + " Price:" + currSelected.GetComponent<Price>().price.ToString());
+            text.text = ("Buy " + currSelected.name + " for " + currSelected.GetComponent<Price>().price.ToString() + " gold");
         }
     }
 
