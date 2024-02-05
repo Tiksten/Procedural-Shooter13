@@ -21,7 +21,7 @@ public class StatsTab : MonoBehaviour
         if (Progress.playerInfo == null)
             return;
 
-        totalDmg.text = "Total Damage: " + Progress.playerInfo.totalDmg.ToString();
-        deaths.text = "Total Deaths: " + Progress.playerInfo.deaths.ToString();
+        totalDmg.text = "Всего Урона: " + Progress.playerInfo.totalDmg.ToString();
+        deaths.text = "Всего Смертей: " + Progress.playerInfo.deaths.ToString();
     }
 }

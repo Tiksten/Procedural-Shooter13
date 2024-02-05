@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
 
 
     [SerializeField]
-    private List<GameObject> enemies;
+    private LootTable enemies;
 
     [SerializeField]
     private AnimationCurve tickTime;
@@ -52,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
         if (!Physics2D.OverlapCircle(pos, 0.2f))
         {
             totalEnemies++;
-            var enemy = Instantiate(enemies[Random.Range(0, enemies.Count)], pos, Quaternion.identity, transform);
+            var enemy = Instantiate(enemies.GetItem(), pos, Quaternion.identity, transform);
             enemy.AddComponent<EnemyAnchor>().enemySpawner = this;
         }
     }
@@ -62,7 +62,7 @@ public class EnemySpawner : MonoBehaviour
         if (!Physics2D.OverlapCircle(pos.position, 0.2f))
         {
             totalEnemies++;
-            var enemy = Instantiate(enemies[Random.Range(0, enemies.Count)], pos.position, Quaternion.identity, transform);
+            var enemy = Instantiate(enemies.GetItem(), pos.position, Quaternion.identity, transform);
             enemy.AddComponent<EnemyAnchor>().enemySpawner = this;
         }
     }

@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
         {
             collision.collider.GetComponent<Health>().RecieveDmg(dmg);
             effect = hitBody;
-            Progress.playerInfo.totalDmg += dmg;
+            Progress.playerInfo.totalDmg += (int)dmg;
         }
 
         if (collision.collider.GetComponent<Roaming>() != null)

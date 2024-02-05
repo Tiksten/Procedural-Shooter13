@@ -48,7 +48,7 @@ public class GooglePay : MonoBehaviour
         {
             currSelected = collision.GetComponent<Price>();
 
-            text.text = ("Buy " + currSelected.name + " for " + currSelected.GetComponent<Price>().price.ToString() + " gold");
+            text.text = ("Купить " + currSelected.name + " за " + currSelected.GetComponent<Price>().price.ToString() + " золота");
         }
     }
 

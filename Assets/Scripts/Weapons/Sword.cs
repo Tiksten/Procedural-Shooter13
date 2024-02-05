@@ -35,6 +35,14 @@ public class Sword : MonoBehaviour, IPickable
         Gizmos.DrawSphere(transform.position + transform.right * dist, radius);
     }
 
+    private void Start()
+    {
+        if (transform.parent.GetComponent<WeaponSwitch>() != null)
+            OnPickUp();
+        else
+            OnDrop();
+    }
+
     public void OnPickUp()
     {
         canSwing = true;

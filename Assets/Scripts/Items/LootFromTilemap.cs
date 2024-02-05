@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.WSA;
 
 public class LootFromTilemap : MonoBehaviour
 {
@@ -20,7 +19,10 @@ public class LootFromTilemap : MonoBehaviour
             {
                 var item = lootTable.GetItem();
                 if (item != null)
-                    Instantiate(item, (Vector2Int)pos + Vector2.one * 0.5f, Quaternion.identity, transform);
+                {
+                    var go = Instantiate(item, (Vector2Int)pos + Vector2.one * 0.5f, Quaternion.identity, transform);
+                    go.name = go.name.Remove(go.name.Length-7);
+                }
             }
         }
 

@@ -58,14 +58,18 @@ SpriteAtlas:
     - 9eaeef025a6c32f489832ab19ed7f470: 434574176
     - 9eaeef025a6c32f489832ab19ed7f470: -960774938
     - 9eaeef025a6c32f489832ab19ed7f470: 1067754610
+    - 9eaeef025a6c32f489832ab19ed7f470: 653584429
     - 9eaeef025a6c32f489832ab19ed7f470: 1606858137
     - 9eaeef025a6c32f489832ab19ed7f470: 1880967981
     - 9eaeef025a6c32f489832ab19ed7f470: 519118194
     - 9eaeef025a6c32f489832ab19ed7f470: 1097424855
+    - 9eaeef025a6c32f489832ab19ed7f470: 1279844188
+    - 9eaeef025a6c32f489832ab19ed7f470: -1936485898
     - 9eaeef025a6c32f489832ab19ed7f470: -1049393737
     - 9eaeef025a6c32f489832ab19ed7f470: 200131682
     - 9eaeef025a6c32f489832ab19ed7f470: -1327777722
     - 9eaeef025a6c32f489832ab19ed7f470: -534215729
+    - 9eaeef025a6c32f489832ab19ed7f470: 188175177
     - 9eaeef025a6c32f489832ab19ed7f470: -733810120
     - 9eaeef025a6c32f489832ab19ed7f470: 714223352
     - 9eaeef025a6c32f489832ab19ed7f470: 1363922414
@@ -83,9 +87,14 @@ SpriteAtlas:
     - 9eaeef025a6c32f489832ab19ed7f470: 797793281
     - 9eaeef025a6c32f489832ab19ed7f470: 264444957
     - 9eaeef025a6c32f489832ab19ed7f470: 469840977
+    - 9eaeef025a6c32f489832ab19ed7f470: 1764476210
     - 9eaeef025a6c32f489832ab19ed7f470: 158891071
     - 9eaeef025a6c32f489832ab19ed7f470: -940731980
+    - 9eaeef025a6c32f489832ab19ed7f470: -147951483
+    - 9eaeef025a6c32f489832ab19ed7f470: 1453984271
     - 9eaeef025a6c32f489832ab19ed7f470: -1312229026
+    - 9eaeef025a6c32f489832ab19ed7f470: -1017027190
+    - 9eaeef025a6c32f489832ab19ed7f470: -1231200050
     - 9eaeef025a6c32f489832ab19ed7f470: 284501366
     - 9eaeef025a6c32f489832ab19ed7f470: -113937119
     - 9eaeef025a6c32f489832ab19ed7f470: -962562288
@@ -104,14 +113,18 @@ SpriteAtlas:
   - {fileID: 434574176, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -960774938, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1067754610, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 653584429, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1606858137, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1880967981, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 519118194, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1097424855, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 1279844188, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: -1936485898, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1049393737, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 200131682, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1327777722, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -534215729, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 188175177, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -733810120, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 714223352, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 1363922414, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
@@ -129,9 +142,14 @@ SpriteAtlas:
   - {fileID: 797793281, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 264444957, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 469840977, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 1764476210, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 158891071, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -940731980, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: -147951483, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 1453984271, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1312229026, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: -1017027190, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: -1231200050, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 284501366, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -113937119, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -962562288, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
@@ -149,14 +167,18 @@ SpriteAtlas:
   - DungeonExit
   - PKM
   - Health
+  - Axe
   - Beretta
   - Gun
   - MAC10
   - Explosive
+  - Hammer
+  - Fork
   - Oneshot
   - Sword
   - Magnum
   - Skinny
+  - Bat
   - Bullet
   - Tec9
   - Deagle
@@ -174,9 +196,14 @@ SpriteAtlas:
   - Gun11
   - Default
   - Player
+  - Butcher
   - Fat
   - AmmoBox
+  - Bomb
+  - MetalBar
   - Enemy
+  - Crowbar
+  - Knife
   - PressurePlate
   - NOVA
   - Coin

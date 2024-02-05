@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66358b73f3ae1c4da9d504e620411ba, type: 3}
+  m_Name: Cave
+  m_EditorClassIdentifier: 
+  lootTable:
+  - item: {fileID: 0}
+    spawnChance: 300
+  - item: {fileID: 7574793276523613029, guid: 72d2f81f3e1dda04c93a9a039411c436, type: 3}
+    spawnChance: 60
+  - item: {fileID: 7574793276523613029, guid: 75c9348d57c322741a88005524899c88, type: 3}
+    spawnChance: 10
+  - item: {fileID: 7574793276523613029, guid: 73f2ce8eb23b2dc41b3ef3e352639914, type: 3}
+    spawnChance: 1
+  - item: {fileID: 1990903178811577899, guid: 8612053c263dde54abeaeedc629f6637, type: 3}
+    spawnChance: 9
+  - item: {fileID: 5508714684391905352, guid: 45b8ae6842ff1b344acca0747acf31fc, type: 3}
+    spawnChance: 20
+  - item: {fileID: 548881778448023901, guid: 468c1c438289e354ca17bd0413747796, type: 3}
+    spawnChance: 1
+  - item: {fileID: 4036895212663235054, guid: d29d4efc53d438b4495aaba7e5baf6bc, type: 3}
+    spawnChance: 1
+  - item: {fileID: 8078391732746085506, guid: 38911542c91468242a8a137ce6b48061, type: 3}
+    spawnChance: 2
+  - item: {fileID: 6509246203663130540, guid: 7cec7f6d83826c64e9b00e004ebd096f, type: 3}
+    spawnChance: 1

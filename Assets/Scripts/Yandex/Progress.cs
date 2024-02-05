@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
 public class PlayerInfo
 {
     public int coins;
     public int deaths;
-    public float totalDmg;
+    public int totalDmg;
 }
 
 //one instance in hub
@@ -23,6 +24,16 @@ public class Progress : MonoBehaviour
 
     [DllImport("__Internal")]
     private static extern void LoadExtern();
+
+    [DllImport("__Internal")]
+    private static extern void SetToLeaderboard(int value);
+
+    [DllImport("__Internal")]
+    private static extern void ShowAdv();
+
+    public static UnityEvent OnLoadDone = new UnityEvent();
+
+    public static bool isLoaded;
 
     public static int raidCoins;
 
@@ -43,7 +54,7 @@ public class Progress : MonoBehaviour
         }
     }
 
-    public static void Save()
+    public static void Save(bool withAdv = false)
     {
         playerInfo.coins += raidCoins;
         raidCoins = 0;
@@ -53,6 +64,11 @@ public class Progress : MonoBehaviour
 #if !UNITY_EDITOR
         string jsonString = JsonUtility.ToJson(playerInfo);
         SaveExtern(jsonString);
+
+        SetToLeaderboard(playerInfo.totalDmg);
+
+        if(withAdv)
+            ShowAdv();
 #endif
     }
 
@@ -74,5 +90,17 @@ public class Progress : MonoBehaviour
 
         if (FindObjectOfType<StatsTab>() != null)
             FindObjectOfType<StatsTab>().UpdateVisuals();
+
+        if (OnLoadDone != null)
+            OnLoadDone.Invoke();
+
+        isLoaded = true;
+    }
+
+    public void AddCoins(int value)
+    {
+        playerInfo.coins += value;
+        Save();
+        Coins.instance.UpdateText();
     }
 }

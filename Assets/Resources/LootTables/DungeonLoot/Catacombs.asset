@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66358b73f3ae1c4da9d504e620411ba, type: 3}
+  m_Name: Catacombs
+  m_EditorClassIdentifier: 
+  lootTable:
+  - item: {fileID: 0}
+    spawnChance: 300
+  - item: {fileID: 7574793276523613029, guid: 2f9853f6bf7e43c42aed7c37ac973005, type: 3}
+    spawnChance: 80
+  - item: {fileID: 7574793276523613029, guid: 72d2f81f3e1dda04c93a9a039411c436, type: 3}
+    spawnChance: 2
+  - item: {fileID: 1990903178811577899, guid: 8612053c263dde54abeaeedc629f6637, type: 3}
+    spawnChance: 8
+  - item: {fileID: 8464409381934151852, guid: b13b000ee4a31eb4d9b9b989df04e7ed, type: 3}
+    spawnChance: 4
+  - item: {fileID: 5055900120893584230, guid: 315394c587245b842a0f42ee5612fe2e, type: 3}
+    spawnChance: 4
+  - item: {fileID: 266422419708094581, guid: 09ce545bdcd46154593f60cad568fbd0, type: 3}
+    spawnChance: 4
+  - item: {fileID: 7695666871402720579, guid: 1f1355aeb9f57e04796d4626883631fe, type: 3}
+    spawnChance: 3

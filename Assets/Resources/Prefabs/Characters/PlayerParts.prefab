@@ -726,7 +726,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 514b114c1d9c31d4f81db9be244fdd4f, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -1005,8 +1005,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3031074293397800944, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.40000153
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5316194622348027242, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 4393278385902409640}
     - target: {fileID: 9213540204377695257, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
       propertyPath: text
       value: 
@@ -1014,10 +1018,112 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5082257549400586716, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5540506135817038057}
+    - targetCorrespondingSourceObject: {fileID: 5082257549400586716, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3750918757988132799}
+    - targetCorrespondingSourceObject: {fileID: 5082257549400586716, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7290529267155807633}
   m_SourcePrefab: {fileID: 100100000, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
 --- !u!4 &4393278385902409640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3010855027577535082, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
   m_PrefabInstance: {fileID: 1526926811473669570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6032419453448868894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5082257549400586716, guid: 85717d0814e7ba1488a4855d4a79e069, type: 3}
+  m_PrefabInstance: {fileID: 1526926811473669570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5540506135817038057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032419453448868894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cf6bc65f7d64b8f86b158d244d6bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3750918757988132799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032419453448868894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
+  m_UseCameraSpace: 1
+  m_ReactionSettings:
+    m_SecondaryNoise: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+    m_AmplitudeGain: 10
+    m_FrequencyGain: 10
+    m_Duration: 0.3
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &7290529267155807633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032419453448868894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.2
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: 0, z: 0}

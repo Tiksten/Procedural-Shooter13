@@ -17,13 +17,13 @@ public class LootContainer : MonoBehaviour
         {
             if(GetComponent<Health>().hp<=0)
             {
-                for (var i = Random.Range(dropCount.x, dropCount.y); i > 0; i--)
+                for (var i = Random.Range(dropCount.x, dropCount.y+1); i > 0; i--)
                 {
                     var dir = Random.insideUnitCircle;
 
                     var hit = Physics2D.Raycast(transform.position, dir, 2);
 
-                    if (hit.point != null)
+                    if (hit.collider != null)
                     {
                         Instantiate(lootTable.GetItem(), hit.point, Quaternion.identity);
                     }

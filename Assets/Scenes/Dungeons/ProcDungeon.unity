@@ -671,17 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDist: {x: 10, y: 15}
-  enemies:
-  - {fileID: 4597564244847766225, guid: 9c24963cd5c34d846b1a0d14339cbcd1, type: 3}
-  - {fileID: 4597564244847766225, guid: 9c24963cd5c34d846b1a0d14339cbcd1, type: 3}
-  - {fileID: 4597564244847766225, guid: 9c24963cd5c34d846b1a0d14339cbcd1, type: 3}
-  - {fileID: 4597564244847766225, guid: 3d8a37f7c43614246a1e561a226c00b7, type: 3}
-  - {fileID: 4597564244847766225, guid: 3d8a37f7c43614246a1e561a226c00b7, type: 3}
-  - {fileID: 4597564244847766225, guid: 48e5c4a604f06a243b59b543fc4ee6c2, type: 3}
-  - {fileID: 4597564244847766225, guid: 48e5c4a604f06a243b59b543fc4ee6c2, type: 3}
-  - {fileID: 4597564244847766225, guid: e41cbabb7ed2c5e43bc40f4035ec2c50, type: 3}
-  - {fileID: 4597564244847766225, guid: 16b4b148b6d706546874054943f60319, type: 3}
-  - {fileID: 4597564244847766225, guid: 3e0e54a1ae44f8d458280adb7b5723cf, type: 3}
+  enemies: {fileID: 11400000, guid: e2a8f212931ea6e4787ef10890514c35, type: 2}
   tickTime:
     serializedVersion: 2
     m_Curve:
