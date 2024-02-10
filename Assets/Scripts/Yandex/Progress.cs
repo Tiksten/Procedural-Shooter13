@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 
 [System.Serializable]
@@ -28,14 +29,13 @@ public class Progress : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void SetToLeaderboard(int value);
 
-    [DllImport("__Internal")]
-    private static extern void ShowAdv();
-
     public static UnityEvent OnLoadDone = new UnityEvent();
 
     public static bool isLoaded;
 
     public static int raidCoins;
+
+    public static bool canAct = true;
 
     private void Start()
     {
@@ -54,7 +54,7 @@ public class Progress : MonoBehaviour
         }
     }
 
-    public static void Save(bool withAdv = false)
+    public static void Save()
     {
         playerInfo.coins += raidCoins;
         raidCoins = 0;
@@ -66,9 +66,6 @@ public class Progress : MonoBehaviour
         SaveExtern(jsonString);
 
         SetToLeaderboard(playerInfo.totalDmg);
-
-        if(withAdv)
-            ShowAdv();
 #endif
     }
 
@@ -102,5 +99,17 @@ public class Progress : MonoBehaviour
         playerInfo.coins += value;
         Save();
         Coins.instance.UpdateText();
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        AudioListener.volume = 0;
+    }
+
+    public void Continue()
+    {
+        Time.timeScale = 1;
+        AudioListener.volume = 1;
     }
 }

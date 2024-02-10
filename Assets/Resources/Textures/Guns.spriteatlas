@@ -77,6 +77,7 @@ SpriteAtlas:
     - 9eaeef025a6c32f489832ab19ed7f470: -1114553326
     - 9eaeef025a6c32f489832ab19ed7f470: -1085181408
     - 9eaeef025a6c32f489832ab19ed7f470: -1896873566
+    - 9eaeef025a6c32f489832ab19ed7f470: 1682126000
     - 9eaeef025a6c32f489832ab19ed7f470: 410385814
     - 9eaeef025a6c32f489832ab19ed7f470: -418407799
     - 9eaeef025a6c32f489832ab19ed7f470: 870398606
@@ -133,6 +134,7 @@ SpriteAtlas:
   - {fileID: -1114553326, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1085181408, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -1896873566, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
+  - {fileID: 1682126000, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 410385814, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: -418407799, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
   - {fileID: 870398606, guid: 9eaeef025a6c32f489832ab19ed7f470, type: 3}
@@ -188,6 +190,7 @@ SpriteAtlas:
   - Gun5
   - Gun4
   - Gun7
+  - DeadBody
   - Gun6
   - Gun3
   - Gun2

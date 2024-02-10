@@ -114,6 +114,8 @@ public class Gun : MonoBehaviour, IPickable
 
     private void Update()
     {
+        if (!Progress.canAct) return;
+
         if (canFire && ammo.currAmmo > consumesAmmo)
         {
             if (Input.GetKey(KeyCode.Mouse0) && isFullAuto)

@@ -18,6 +18,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!Progress.canAct)
+        {
+            rb.velocity = Vector2.zero;
+            transform.position = Vector3.zero;
+            return;
+        }
+
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 
