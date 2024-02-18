@@ -13,7 +13,7 @@ public class DungeonEntrance : MonoBehaviour
         if (collision.tag != "Player")
             return;
 
-        Player.inRaid = !Player.inRaid;
+        Progress.inRaid = !Progress.inRaid;
 
         Progress.Save();
 

@@ -22,9 +22,9 @@ public class Coins : MonoBehaviour
         if (Progress.playerInfo == null)
             return;
 
-        if(Progress.raidCoins>0)
-            text.text = Progress.raidCoins.ToString();
+        if(Progress.inRaid)
+            text.text = "Монет в рейде: " + Progress.raidCoins.ToString();
         else
-            text.text = Progress.playerInfo.coins.ToString();
+            text.text = "Монет на базе: " + Progress.playerInfo.coins.ToString();
     }
 }

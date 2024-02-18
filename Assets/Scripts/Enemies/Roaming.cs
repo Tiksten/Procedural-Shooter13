@@ -53,7 +53,7 @@ public class Roaming : MonoBehaviour
             }
         }
 
-        currTarget = transform.position + (Vector3)Random.insideUnitCircle * Random.Range(2, 5);
+        currTarget = transform.position + (Vector3)Random.insideUnitCircle.normalized * Random.Range(2, 5) + (target.position - transform.position).normalized;
 
         Invoke("Tick", Random.Range(tickTime.x, tickTime.y));
     }

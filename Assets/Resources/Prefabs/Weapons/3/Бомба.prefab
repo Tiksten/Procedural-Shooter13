@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71c1f084cdfa43468de334f116c5363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 1000
+  price: 875
   onPaid:
     m_PersistentCalls:
       m_Calls:

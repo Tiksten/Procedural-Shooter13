@@ -49,19 +49,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 500
-  cycletime: 2
+  cycletime: 0.1
   isFullAuto: 0
   pellets: 1
   inaccuracy: 0.05
   consumesAmmo: 12
-  shakeAmplitude: 0.8
-  bullet: {fileID: 1982060758346116332, guid: 2b6e2027f1b4a1f43bd3aae1d81d2a60, type: 3}
+  shakeAmplitude: 1.4
+  bullet: {fileID: 2930242397289515793, guid: f74e17a700c61af4fb8b83121ea857b3, type: 3}
   bulletSpeed: 20
   bulletSize: 1
   bulletDist: 0.5
   gunShotSound: 4
   gunEquipSound: 1
-  bulletLiveTime: 2
+  bulletLiveTime: 10
 --- !u!212 &474771558199052450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71c1f084cdfa43468de334f116c5363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 1000
+  price: 8750
   onPaid:
     m_PersistentCalls:
       m_Calls:

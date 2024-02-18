@@ -11,9 +11,10 @@ public class DeadBody : MonoBehaviour
 
     private void Start()
     {
+        Progress.inRaid = !Progress.inRaid;
         Progress.raidCoins = (int)(Progress.raidCoins * 0.4f);
         Progress.playerInfo.deaths += 1;
-        Invoke("Restart", 10);
+        Invoke("Restart", 6);
         Destroy(FindObjectOfType<Player>().gameObject);
 
         Progress.Save();

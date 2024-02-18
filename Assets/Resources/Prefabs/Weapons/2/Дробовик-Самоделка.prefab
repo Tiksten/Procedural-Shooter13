@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 15
   cycletime: 0.2
-  isFullAuto: 0
+  isFullAuto: 1
   pellets: 7
   inaccuracy: 0.2
   consumesAmmo: 2
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71c1f084cdfa43468de334f116c5363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 520
+  price: 1300
   onPaid:
     m_PersistentCalls:
       m_Calls:

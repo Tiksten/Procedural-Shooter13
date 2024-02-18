@@ -50,9 +50,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dist: 0.5
   radius: 0.5
-  dmg: 20
-  cycletime: 0.5
-  knockback: 15
+  dmg: 60
+  cycletime: 0.4
+  knockback: 16
   blood: {fileID: 3865427627804100001, guid: e3aec49f47b25944db37fb5ce5a859c9, type: 3}
   swingAngle: 90
 --- !u!212 &5855518790569631613
@@ -238,7 +238,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.14083672, y: 0.23477249}
     oldSize: {x: 0.25, y: 0.625}
     newSize: {x: 0.4375, y: 0.25}
     adaptiveTilingThreshold: 0.5
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71c1f084cdfa43468de334f116c5363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 20
+  price: 200
   onPaid:
     m_PersistentCalls:
       m_Calls:

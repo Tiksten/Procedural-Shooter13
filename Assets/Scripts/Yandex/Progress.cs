@@ -37,6 +37,8 @@ public class Progress : MonoBehaviour
 
     public static bool canAct = true;
 
+    public static bool inRaid;
+
     private void Start()
     {
         playerInfo = new PlayerInfo();

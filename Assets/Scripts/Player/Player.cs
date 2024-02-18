@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static bool inRaid;
-
     private void Start()
     {
         DontDestroyOnLoad(gameObject);

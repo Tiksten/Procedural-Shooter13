@@ -15,7 +15,7 @@ public class GooglePay : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && currSelected != null)
         {
-            if(Player.inRaid)
+            if(Progress.inRaid)
             {
                 if (currSelected.price <= Progress.raidCoins)
                 {
@@ -48,7 +48,7 @@ public class GooglePay : MonoBehaviour
         {
             currSelected = collision.GetComponent<Price>();
 
-            text.text = ("Купить " + currSelected.name + " за " + currSelected.GetComponent<Price>().price.ToString() + " золота");
+            text.text = ("Нажмите Е чтобы купить " + currSelected.name + " за " + currSelected.GetComponent<Price>().price.ToString() + " золота");
         }
     }
 
